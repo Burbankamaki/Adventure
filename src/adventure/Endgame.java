@@ -16,6 +16,11 @@ public class Endgame {
     String carAnimalWork = "the deer move on, and you continue your relaxing drive to work. you arrive on time and in one piece!";
     String youWin = "\nYOU WIN!";
     String youLose = "\nYOU LOSE!";
+    boolean indicator = false;
+    int totalWins = 0;
+    int totalLosses = 0;
+    int winPercentage = 0;
+            
     
     public void displayCarFreewayHospital(){
         System.out.println(carFreewayHospital);
@@ -36,5 +41,27 @@ public class Endgame {
         System.out.println(carAnimalWork);
         System.out.println(youWin);
         
+    }
+    
+    public double displayWinLossInfo(int totalwins,int totalLosses){
+        if (totalWins < 0){
+               System.out.println("error, totalWins must be greater than or equal to zero. ");
+               return -1;}
+        if (totalLosses < 0){
+                System.out.println("error, totalLosses must be greater than or equal to zero.");
+                return -1;
+        }
+        if (indicator == true){
+            totalWins++;
+        }
+        else {
+            totalLosses++;
+        }
+        System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
+        double trueWinPercentage = winPercentage;
+        trueWinPercentage =totalWins/(totalWins+totalLosses);
+        System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"! \ngood job!");
+                
+        return winPercentage;
     }
 }

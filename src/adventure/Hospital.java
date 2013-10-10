@@ -11,8 +11,7 @@ import java.util.Scanner;
  * @author lisapage
  */
 public class Hospital {
-    String hospitalStory = "You jump over the badger and he whips around and bites your leg."
-                        +"\nCringing in pain you reach for your phone to call for help.";
+    String hospitalStory ="\nCringing in pain you reach for your phone to call for help.";
                        
     String StoryOptions = "\nDid you remember to bring your phone from home?"
             + "\n1.Yes! Call for help!"

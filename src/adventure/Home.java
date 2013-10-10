@@ -62,7 +62,8 @@ public class Home {
         }
         if (choice.equals("2")){
             System.out.println("You head out the door for a relaxing walk to work. \nYou get the feeling that the change of pace and the crisp morning air will be good for you!");
-            //INSERT THE DISPLAYWALKSCENE FX HERE ONCE COMPLETE
+            Walk walk = new Walk();
+            walk.displayStoryScene();
         }
         if (choice.equals("3")){
             System.out.println("you pick up your wallet");

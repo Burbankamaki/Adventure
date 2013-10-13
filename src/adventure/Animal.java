@@ -19,7 +19,8 @@ public class Animal {
                         + "\nsandwich in your lunch.";
     String animalStoryOptions = "\nDid you remember to bring your lunch?"
             + "\n1.Yes! Feed the hungry badger."
-            + "\n2.No. Try fighting him instead.";
+            + "\n2.No. Try fighting him instead."
+            + "/n3.Wait. A.D.D moment. Play the Mini Game!";
     String choice;
     int healthPoints = 1;
     

@@ -24,7 +24,7 @@ public class Drive {
     
     public void displayStoryScene(){
         System.out.println(driveStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(driveStoryOptions);

@@ -21,7 +21,7 @@ public class BackRoad {
     
     public void displayStoryScene(){
         System.out.println(backRoadStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(backRoadStoryOptions);

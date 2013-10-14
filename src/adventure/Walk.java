@@ -22,7 +22,7 @@ public class Walk {
     
     public void displayStoryScene(){
         System.out.println(walkStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(walkStoryOptions);

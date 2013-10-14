@@ -25,36 +25,7 @@ public class Adventure {
         Home home = new Home();
         home.displayHomeScene();
         
-        //after this line begins the changes made to meet the format for the homework
-        Drive drive = new Drive();
-        Endgame endgame = new Endgame();
-        Freeway freeway = new Freeway();
-        Player player = new Player();
-        BackRoad backroad = new BackRoad();
-        Animal animal = new Animal();
-        AnimalEncounter animalencounter = new AnimalEncounter();
-        HitchHiker hitchhiker = new HitchHiker();
-        Walk walk = new Walk();
-        Hospital hospital = new Hospital();
-        
-        drive.displayStoryScene();
-        endgame.displayCarAnimalHospital();
-        endgame.displayCarAnimalWork();
-        endgame.displayCarFreewayHospital();
-        endgame.displayCarFreewayWork();
-        freeway.displayStoryScene();
-        player.displayInventory();
-        backroad.displayStoryScene();
-        animal.displayStoryScene();
-        animalencounter.displayStoryScene();
-        hitchhiker.displayStoryScene();
-        walk.displayStoryScene();
-        hospital.displayStoryScene();
-        
-        
-        
-        //uncomment the next line after homework
-        //home.displayHomeOptions();
+        home.displayHomeOptions();
         
         
     }

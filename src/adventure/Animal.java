@@ -26,7 +26,7 @@ public class Animal {
     
     public void displayStoryScene(){
         System.out.println(animalStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(animalStoryOptions);

@@ -20,7 +20,7 @@ public class Freeway {
     
     public void displayStoryScene(){
         System.out.println(freewayStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(freewayStoryOptions);

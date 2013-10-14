@@ -14,6 +14,12 @@ public class Endgame {
     String carFreewayWork = "the car speeds ahead and causes a massive wreck right after your exit. good thing you're off the freeway! \n you arrive at work on time and in one piece!";
     String carAnimalHospital = "the deer was much bigger than you expected, and your car crashed into it. \nthe crash knocks you out and you awaken in the hospital where your boss calls you and fires you.";
     String carAnimalWork = "the deer move on, and you continue your relaxing drive to work. you arrive on time and in one piece!";
+    String walkAnimalWork = "fill";
+    String walkAnimalHospital = "fill";
+    String walkHitchHikerWork = "fill";
+    String walkHitchHikerHospital = "fill";
+    String walkHospitalHospital = "fill";
+    String walkHospitalWork = "fill";
     String youWin = "\nYOU WIN!";
     String youLose = "\nYOU LOSE!";
     boolean indicator = false;
@@ -30,7 +36,8 @@ public class Endgame {
     public void displayCarFreewayWork(){
         System.out.println(carFreewayWork);
         System.out.println(youWin);
-        
+        indicator = true;
+        this.displayWinLossInfo(totalWins, totalLosses);
     }
     public void displayCarAnimalHospital(){
         System.out.println(carAnimalHospital);
@@ -41,6 +48,33 @@ public class Endgame {
         System.out.println(carAnimalWork);
         System.out.println(youWin);
         
+    }
+    public void displayWalkAnimalWork(){
+        System.out.println(walkAnimalWork);
+        System.out.println(youWin);
+        
+    }
+    public void displayWalkAnimalHostial(){
+        System.out.println(walkAnimalHospital);
+        System.out.println(youLose);
+    }
+    public void displayWalkHitchHikerWork(){
+        System.out.println(walkHitchHikerWork);
+        System.out.println(youWin);
+        
+    }
+    public void displayWalkHitchHikerHospital(){
+        System.out.println(walkHitchHikerHospital);
+        System.out.println(youLose);
+    }
+    public void displayWalkHospitalWork(){
+        System.out.println(walkHospitalWork);
+        System.out.println(youWin);
+        
+    }
+    public void displayWalkHospitalHospital(){
+        System.out.println(walkHospitalHospital);
+        System.out.println(youLose);
     }
     
     public double displayWinLossInfo(int totalwins,int totalLosses){
@@ -59,8 +93,8 @@ public class Endgame {
         }
         System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
         double trueWinPercentage = winPercentage;
-        trueWinPercentage =totalWins/(totalWins+totalLosses);
-        System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"! \ngood job!");
+        trueWinPercentage =totalWins/(totalWins+totalLosses)*100;
+        System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"%! \ngood job!");
                 
         return winPercentage;
     }

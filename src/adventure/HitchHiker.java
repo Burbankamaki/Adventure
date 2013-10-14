@@ -26,7 +26,7 @@ public class HitchHiker {
     
     public void displayStoryScene(){
         System.out.println(hitchHikerStory);
-       // this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(StoryOptions);
@@ -34,11 +34,11 @@ public class HitchHiker {
         this.choice = input.next();
         if (choice.equals("1")){
             Endgame endgame = new Endgame();
-           // endgame.displayStoryScene();
+            endgame.displayWalkHitchHikerHospital();
         }
         if (choice.equals("2")){
             Endgame endgame = new Endgame();
-            //endgame.displayStoryScene();
+            endgame.displayWalkHitchHikerWork();
         }
         if (choice.equals("i")){
             Player player = new Player();

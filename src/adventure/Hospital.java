@@ -13,26 +13,26 @@ import java.util.Scanner;
 public class Hospital {
     String hospitalStory ="\nCringing in pain you reach for your phone to call for help.";
                        
-    String StoryOptions = "\nDid you remember to bring your phone from home?"
+    String hospitalStoryOptions = "\nDid you remember to bring your phone from home?"
             + "\n1.Yes! Call for help!"
             + "\n2.No. Rats.";
     String choice;
     
     public void displayStoryScene(){
         System.out.println(hospitalStory);
-       // this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
-       // System.out.println(hospitalStoryOptions);
+        System.out.println(hospitalStoryOptions);
         Scanner input = new Scanner(System.in);
         this.choice = input.next();
         if (choice.equals("1")){
             Endgame endgame = new Endgame();
-          //  endgame.displayStoryScene();
+            endgame.displayWalkHospitalWork();
         }
         if (choice.equals("2")){
             Endgame endgame = new Endgame();
-          //  endgame.displayStoryScene();
+            endgame.displayWalkHospitalHospital();
         }
         if (choice.equals("i")){
             Player player = new Player();

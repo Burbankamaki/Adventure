@@ -22,7 +22,7 @@ public class AnimalEncounter {
     
     public void displayStoryScene(){
         System.out.println(animalEncounterStory);
-        //this.displayStoryOptions();
+        this.displayStoryOptions();
     }
     public void displayStoryOptions(){
         System.out.println(StoryOptions);
@@ -30,11 +30,11 @@ public class AnimalEncounter {
         this.choice = input.next();
         if (choice.equals("1")){
             Endgame endgame = new Endgame();
-           // endgame.displayStoryScene();
+            endgame.displayWalkAnimalWork();
         }
         if (choice.equals("2")){
             Endgame endgame = new Endgame();
-           // endgame.displayStoryScene();
+            endgame.displayWalkAnimalHostial();
         }
         if (choice.equals("i")){
             Player player = new Player();

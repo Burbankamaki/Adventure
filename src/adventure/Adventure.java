@@ -23,6 +23,8 @@ public class Adventure {
         myGame.displayHelp();
         
         Home home = new Home();
+        HelpMenuView helpmenuview = new HelpMenuView();
+        helpmenuview.getInput();
         home.displayHomeScene();
         
         home.displayHomeOptions();

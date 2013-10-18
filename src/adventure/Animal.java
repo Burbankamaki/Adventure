@@ -22,7 +22,7 @@ public class Animal {
             + "\n2.No. Try fighting him instead."
             + "/n3.Wait. A.D.D moment. Play the Mini Game!";
     String choice;
-    int healthPoints = 1;
+    double healthPoints = 1;
     
     public void displayStoryScene(){
         System.out.println(animalStory);
@@ -66,7 +66,7 @@ public class Animal {
             return;
         }
         
-        double damage = healthPoints;
+        int damage = (int) healthPoints;
         damage = damage+1;
         double remainingPoints = healthPoints-damage;
         System.out.println("so you think you have "+healthPoints+" points of health, huh?\nWell, actually\t\t\tNOT ANYMORE! \nThe badger just hit you for "+damage+" damage! \n your remaining hit points are now "+remainingPoints+"\nYou are mortally wounded!");

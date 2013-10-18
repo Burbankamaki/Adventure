@@ -11,8 +11,8 @@ package adventure;
 public class MainMenuControl {
     
     public void startNewGame(){
-        Home home = new Home();
-        home.displayHomeScene();
+        HomeView homeView = new HomeView();
+        homeView.getInput();
     }
     
     public void displayHelpMenu(){

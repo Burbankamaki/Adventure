@@ -26,6 +26,13 @@ public class Adventure {
         mainMenuView.mainMenu();
         
     }
+    
+    
+    
+    
+    
+    
+    
     public void getName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name.");

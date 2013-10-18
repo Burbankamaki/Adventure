@@ -26,7 +26,10 @@ public class Endgame {
     double totalWins = 0;
     double totalLosses = 0;
     
-            
+    public Endgame()
+    {
+        
+    }
     
     public void displayCarFreewayHospital(){
         System.out.println(carFreewayHospital);

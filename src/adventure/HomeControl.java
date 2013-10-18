@@ -12,8 +12,8 @@ package adventure;
 public class HomeControl {
  
     public void optionOne(){
-        Drive drive = new Drive();
-        drive.displayStoryScene();
+        DriveView driveView = new DriveView();
+        driveView.getInput();
     }
     
     public void optionTwo(){

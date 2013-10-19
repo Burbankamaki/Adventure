@@ -12,13 +12,13 @@ public class DriveControl {
     
     
         public void optionOne(){
-        Freeway freeway = new Freeway();
-        freeway.displayStoryScene();
+        FreewayView freewayView = new FreewayView();
+        freewayView.getInput();
     }
     
     public void optionTwo(){
-        BackRoad backRoad = new BackRoad();
-        backRoad.displayStoryScene();
+        BackRoadView backRoadView = new BackRoadView();
+        backRoadView.getInput();
     
     }
     

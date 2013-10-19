@@ -38,7 +38,7 @@ public class Animal {
         }
         if (choice.equals("2")){
             
-            this.displayFightScene();
+            this.getFightSceneInput();
             
             Hospital hospital = new Hospital();
             hospital.displayStoryScene();
@@ -56,21 +56,28 @@ public class Animal {
         }
     }
     
-    public void displayFightScene(){
-            
+    public void getFightSceneInput(){
         System.out.println("ok! lets fight the badger!\n first off, how many health points do you have?\n");
         Scanner input = new Scanner(System.in);
         this.healthPoints = input.nextInt();
+        double trueRemainingPoints = displayFightScene(healthPoints);
+        System.out.println("your remaining hit points are now "+trueRemainingPoints+"\nYou are mortally wounded!");
+       
+    }
+    
+    
+    public double displayFightScene(double healthPoints){
+            
         if (healthPoints <= 0){
             System.out.println("your hit points cant be zero or less.\nif they were you'd already be dead!");
-            return;
+            return -1;
         }
         
         int damage = (int) healthPoints;
-        damage = damage+1;
+        damage = damage+2;
         double remainingPoints = healthPoints-damage;
-        System.out.println("so you think you have "+healthPoints+" points of health, huh?\nWell, actually\t\t\tNOT ANYMORE! \nThe badger just hit you for "+damage+" damage! \n your remaining hit points are now "+remainingPoints+"\nYou are mortally wounded!");
-        
+        System.out.println("so you think you have "+healthPoints+" points of health, huh?\nWell, actually\t\t\tNOT ANYMORE! \nThe badger just hit you for "+damage+" damage! \n");
+        return remainingPoints;
     }
     
 }

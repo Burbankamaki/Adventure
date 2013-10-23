@@ -22,15 +22,17 @@ public class Adventure {
         myGame.getName();
         myGame.displayHelp();
         
-        Home home = new Home();
-        HelpMenuView helpmenuview = new HelpMenuView();
-        helpmenuview.getInput();
-        home.displayHomeScene();
-        
-        home.displayHomeOptions();
-        
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.mainMenu();
         
     }
+    
+    
+    
+    
+    
+    
+    
     public void getName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name.");

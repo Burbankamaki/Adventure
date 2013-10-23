@@ -23,61 +23,76 @@ public class Endgame {
     String youWin = "\nYOU WIN!";
     String youLose = "\nYOU LOSE!";
     boolean indicator = false;
-    int totalWins = 0;
-    int totalLosses = 0;
-    int winPercentage = 0;
-            
+    double totalWins = 0;
+    double totalLosses = 0;
+    
+    public Endgame()
+    {
+        
+    }
     
     public void displayCarFreewayHospital(){
         System.out.println(carFreewayHospital);
         System.out.println(youLose);
-        
+        indicator = false;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayCarFreewayWork(){
         System.out.println(carFreewayWork);
         System.out.println(youWin);
         indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses);
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayCarAnimalHospital(){
         System.out.println(carAnimalHospital);
         System.out.println(youLose);
-        
+        indicator = false;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayCarAnimalWork(){
         System.out.println(carAnimalWork);
         System.out.println(youWin);
-        
+        indicator = true;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkAnimalWork(){
         System.out.println(walkAnimalWork);
         System.out.println(youWin);
-        
+        indicator = true;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkAnimalHostial(){
         System.out.println(walkAnimalHospital);
         System.out.println(youLose);
+        indicator = false;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkHitchHikerWork(){
         System.out.println(walkHitchHikerWork);
         System.out.println(youWin);
-        
+        indicator = true;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkHitchHikerHospital(){
         System.out.println(walkHitchHikerHospital);
         System.out.println(youLose);
+        indicator = false;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkHospitalWork(){
         System.out.println(walkHospitalWork);
         System.out.println(youWin);
-        
+        indicator = true;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     public void displayWalkHospitalHospital(){
         System.out.println(walkHospitalHospital);
         System.out.println(youLose);
+        indicator = false;
+        this.displayWinLossInfo(totalWins, totalLosses, indicator);
     }
     
-    public double displayWinLossInfo(int totalwins,int totalLosses){
+    public double displayWinLossInfo(double totalWins,double totalLosses, boolean indicator){
         if (totalWins < 0){
                System.out.println("error, totalWins must be greater than or equal to zero. ");
                return -1;}
@@ -92,10 +107,12 @@ public class Endgame {
             totalLosses++;
         }
         System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
+        int winPercentage = 0;
         double trueWinPercentage = winPercentage;
-        trueWinPercentage =totalWins/(totalWins+totalLosses)*100;
+        trueWinPercentage = totalWins / ( totalWins + totalLosses ) * 100;
+        
         System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"%! \ngood job!");
                 
-        return winPercentage;
+        return trueWinPercentage;
     }
 }

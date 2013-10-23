@@ -19,6 +19,7 @@ public class Home {
     String choice;
     Player player = new Player();
     
+    
     public void displayHomeScene(){
         System.out.println(this.homeStory);
         if (wallet == true){
@@ -33,6 +34,7 @@ public class Home {
         if (phone == true){
             System.out.println("Your phone is in your office on the desk.");
         }
+        displayHomeOptions();
     }   
     public void displayHomeOptions(){
         System.out.println("\nwhat will you do?\n"

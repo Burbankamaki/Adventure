@@ -37,12 +37,21 @@ public class Animal {
          animalEncounter.displayStoryScene();
         }
         if (choice.equals("2")){
+            FightScene fightScene = new FightScene();
             
-            this.getFightSceneInput();
-            
+            int outcome = fightScene.badgerFightScene();
+            if (outcome==1){
+                AnimalEncounter animalEncounter = new AnimalEncounter();
+                 animalEncounter.displayStoryScene();
+                }
+                
+                
+            else{
             Hospital hospital = new Hospital();
             hospital.displayStoryScene();
+            }
         }
+            
         if (choice.equals("i")){
             Player player = new Player();
             player.displayInventory();

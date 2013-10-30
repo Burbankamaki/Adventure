@@ -40,18 +40,7 @@ public class Home {
         System.out.println("\nwhat will you do?\n"
                 + "\n1.attempt to drive to work."
                 + "\n2.attempt to walk to work.");
-        if (wallet == true){
-                System.out.println("3.pick up your wallet.");
-    }
-        if (keys == true){
-                System.out.println("4.pick you your car keys.");
-    }
-        if (lunch == true){
-                System.out.println("5.grab your lunch from the fridge.");
-    }
-        if (phone == true){
-                System.out.println("6.put your cell phone in your pocket.");
-    }
+        
         Scanner input = new Scanner(System.in);
         this.choice = input.next();
         if (choice.equals("1") && this.keys == true){
@@ -67,35 +56,7 @@ public class Home {
             Walk walk = new Walk();
             walk.displayStoryScene();
         }
-        if (choice.equals("3")){
-            System.out.println("you pick up your wallet");
-            player.playerWallet = true;
-            this.wallet = false;
-            displayHomeOptions();
-        }
-        if (choice.equals("4")){
-            System.out.println("you pick up your car keys");
-            player.playerKeys = true;
-            this.keys = false;
-            displayHomeOptions();
-        }
-            if (choice.equals("5")){
-            System.out.println("you grab your lunch");
-            player.playerLunch = true;
-            this.lunch = false;
-            displayHomeOptions();
-        }
-        if (choice.equals("6")){
-            System.out.println("you pick up your cell phone");
-            player.playerPhone = true;
-            this.phone = false;
-            displayHomeOptions();
-        }
-        if (choice.equals("i")){
-            player.displayInventory();
-            displayHomeOptions();
-                    
-        }
+
         else{ System.out.println(choice+" is not a valid option.");
             displayHomeOptions();
         }

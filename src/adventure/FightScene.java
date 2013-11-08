@@ -49,14 +49,14 @@ public class FightScene {
             if (choice.equals("1")){
                 System.out.println("the inventory system hasn't been inplemented yet! you give your pretent lunch to the badger");
                 //this line will remove lunch from inventory
-                return 1;
+                return -2;
                 }
             else if (choice.equals("2")){
                 Random random = new Random();
                 int randomNumber = random.nextInt(3);
                 if (randomNumber == 0) {
                     System.out.println("you escape! and you get to keep your lunch too!");
-                    return 1;
+                    return -2;
                     }
                 if (randomNumber == 1 || randomNumber== 2){
                     System.out.println("you were not able to escape! the badger takes your fumbling escape as an opportunity to attack!");
@@ -75,7 +75,7 @@ public class FightScene {
         
         
     
-        return 2;
+        return -3;
     
     
     }

@@ -10,18 +10,19 @@ package adventure;
  */
 public class MainMenuControl {
     
-    public void startNewGame(){
-        HomeView homeView = new HomeView();
-        homeView.getInput();
+    
+    public int startNewGame(){
+        return 1;
+        
+        
     }
     
-    public void displayHelpMenu(){
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.getInput();
+    public int displayHelpMenu(){
+        return 2;
     }
     
-    public void displayWinPercentage(){
-        System.out.println("not yet implemented!");
+    public int displayWinPercentage(){
+        return 3;
     }
         
     

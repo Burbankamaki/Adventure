@@ -18,6 +18,8 @@ public class Player {
     String [] currentItems= new String[4];
     ArrayList cItems= new ArrayList();
     int x =0;
+    double totalWins=0;
+    double totalLosses=0;
     
     public void getInventoryItems(){
             for (int i=0; i<4; i++ ){
@@ -89,6 +91,20 @@ public class Player {
     }
     
     
+    
+        public void displayWinLossInfo(){
+        
+        
+        System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
+        int winPercentage = 0;
+        double trueWinPercentage = winPercentage;
+        trueWinPercentage = totalWins / ( totalWins + totalLosses ) * 100;
+        
+        System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"%! \ngood job!");
+                
+        
+    }
+
     
     
     

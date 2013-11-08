@@ -28,7 +28,7 @@ public class ScenarioView {
            
            
            
-            System.out.println(this.scenario.instructions+"\n"+this.scenario.option1Description+"\n"+this.scenario.option2Description);
+            System.out.println(this.scenario.instructions+"\n1. "+this.scenario.option1Description+"\n2. "+this.scenario.option2Description);
 
             String cmd = this.getCommand();
 

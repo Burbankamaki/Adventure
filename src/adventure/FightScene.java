@@ -22,7 +22,7 @@ public class FightScene {
         
        do{ Scanner input = new Scanner(System.in);
         String healthPoints = input.next();
-        String check = "[0-9]";
+        String check = "[0-9]+";
         if (!healthPoints.matches(check)){
             System.out.println("please type only the number of your choice, nothing else. be sure it is greater than zero.");
             continue;

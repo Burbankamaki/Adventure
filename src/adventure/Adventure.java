@@ -82,9 +82,9 @@ public class Adventure {
     
 private void createScenarios(Scenario[] listOfScenarios) {
         Scenario home = new Scenario();
-        home.instructions = "Welcome to my home";
-        home.option1Description = "Take a ride";
-        home.option2Description = "Take a walk";
+        home.instructions = "You are at home and need to get to work quickly. \n";
+        home.option1Description = "attempt to drive to work";
+        home.option2Description = "attempt to walk to work";
         home.option1ScenarioIndex = 1;
         home.option2ScenarioIndex = 2;
         home.currentIndex=0;
@@ -93,54 +93,54 @@ private void createScenarios(Scenario[] listOfScenarios) {
         
         
         Scenario drive = new Scenario();
-        drive.instructions = "Going for a drive";//Get Gas Price Game needs to fit somehow
-        drive.option1Description = "Take a freeeay";
-        drive.option2Description = "Take a backroad";
+        drive.instructions = "while driving to work, you encounter the onramp to the freeway\n your usual routine is to take the freeway and fight morning traffic\n though you could always try the back roads for a change...";
+        drive.option1Description = "Take the freeway to work, as usual";
+        drive.option2Description = "Try the more relaxing backroads for a change";
         drive.option1ScenarioIndex = 3;
         drive.option2ScenarioIndex = 4;
         drive.currentIndex = 1;
         Adventure.listOfScenarios[1] = drive;
         
         Scenario walk = new Scenario();
-        walk.instructions = "walk";
-        walk.option1Description = "nature preserve";
-        walk.option2Description = "bagel shop";
+        walk.instructions = "you decide to walk to work. you could walk through the nature preserve, or though the city";
+        walk.option1Description = "walk through the nature preserve";
+        walk.option2Description = "walk through the city";
         walk.option1ScenarioIndex = 6;
         walk.option2ScenarioIndex = 5;
         walk.currentIndex = 2;
         Adventure.listOfScenarios[2] = walk;
         
         Scenario freeway = new Scenario();
-        freeway.instructions = "freeway inst";
-        freeway.option1Description = "leads to lose";
-        freeway.option2Description = "leads to win";
+        freeway.instructions = "\non the freeway you encounter an angry driver! he's driving aggresively right in from of you!\nwhat will you do?";
+        freeway.option1Description = "Is this a challenge? Duel the angry driver in a battle of driving skill!";
+        freeway.option2Description = "Let off the gas in hopes that your reduced speed will put some safe distance between you and the angry driver";
         freeway.option1ScenarioIndex = -3;
         freeway.option2ScenarioIndex = -2;
         freeway.currentIndex = 3;
         Adventure.listOfScenarios[3] = freeway;
         
         Scenario backroad = new Scenario();
-        backroad.instructions = "backroad";
-        backroad.option1Description = "leads to loss";
-        backroad.option2Description = "leads to win";
+        backroad.instructions = "you decide to take the backroads. a deer blocks your path!\nwhat will you do?";
+        backroad.option1Description = "RAMMING SPEED! this deer will make good jerky once it is hunted down from the safety of my vehicle!";
+        backroad.option2Description = "awww! it's got baby deer too! stop the car and paitently wait until the deer move on.";
         backroad.option1ScenarioIndex = -3;
         backroad.option2ScenarioIndex = -2;
         backroad.currentIndex = 4;
         Adventure.listOfScenarios[4] = backroad;
         
         Scenario bagelShop = new Scenario();
-        bagelShop.instructions = "bagelShop";
-        bagelShop.option1Description = "leads to loss by hitchhiker";
-        bagelShop.option2Description = "leads to bagelMenu minigame, then to win";
+        bagelShop.instructions = "you cross by the local bagel shop, you could go in for a bite, but a man stops his car and asks you for directions";
+        bagelShop.option1Description = "get in and show the man the way ";
+        bagelShop.option2Description = "decline to help, you're hungry!";
         bagelShop.option1ScenarioIndex = -3;
         bagelShop.option2ScenarioIndex = 7;//this index value needs to change   !!!!!!!!!!
         bagelShop.currentIndex = 5;
         Adventure.listOfScenarios[5] = bagelShop;
         
         Scenario naturePreserve = new Scenario();
-        naturePreserve.instructions = "nature preserve";
-        naturePreserve.option1Description = "feed badger and win";
-        naturePreserve.option2Description = "fight badger. 1 guess badger's weight, 2. healthpoints game, 3. end with loss or win";
+        naturePreserve.instructions = "you take a stroll thruogh the preserve to be met by an angry badger who blocks your path";
+        naturePreserve.option1Description = "feed badger your lunch";
+        naturePreserve.option2Description = "fight the badger out of your way";
         naturePreserve.option1ScenarioIndex = -2;
         naturePreserve.option2ScenarioIndex = 8;//this index value needs to change
         naturePreserve.currentIndex = 6;

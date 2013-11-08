@@ -17,7 +17,7 @@ public class ScenarioControl {
                 
                 case 1: GetGasPrice getGasPrice = new GetGasPrice();
                         double price =getGasPrice.getGasPrice();
-                    System.out.println("you paid $"+price+"for gas.");
+                    System.out.println("you paid $"+price+"for gas and continue on your way to work.");
                     return 1;
                     
                     

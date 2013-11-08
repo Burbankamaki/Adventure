@@ -26,7 +26,7 @@ public class MainMenuView {
    
     
     // display the help menu and get the end users input selection
-    public void mainMenu() {       
+    public int mainMenu() {       
         
 
         do {
@@ -36,16 +36,17 @@ public class MainMenuView {
 
             switch (command) {
                 case "1":
-                    this.mainMenuControl.startNewGame();
-                    break;
+                    int selection=this.mainMenuControl.startNewGame();
+                    return selection;
                 case "2":
-                    this.mainMenuControl.displayHelpMenu();
-                    break;
+                    selection=this.mainMenuControl.displayHelpMenu();
+                    return selection;
                 case "3":
-                    this.mainMenuControl.displayWinPercentage();
-                    break;                  
+                    selection=this.mainMenuControl.displayWinPercentage();
+                    return selection;                  
             }
-        } while (!command.equals("1"));    
+        } while (!command.equals("1"));  
+        return -1;
 
     }
 

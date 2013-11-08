@@ -14,12 +14,10 @@ public class Endgame {
     String carFreewayWork = "the car speeds ahead and causes a massive wreck right after your exit. good thing you're off the freeway! \n you arrive at work on time and in one piece!";
     String carAnimalHospital = "the deer was much bigger than you expected, and your car crashed into it. \nthe crash knocks you out and you awaken in the hospital where your boss calls you and fires you.";
     String carAnimalWork = "the deer move on, and you continue your relaxing drive to work. you arrive on time and in one piece!";
-    String walkAnimalWork = "fill";
-    String walkAnimalHospital = "fill";
-    String walkHitchHikerWork = "fill";
-    String walkHitchHikerHospital = "fill";
-    String walkHospitalHospital = "fill";
-    String walkHospitalWork = "fill";
+    String walkAnimalWork = "you escape the badger";
+    String walkAnimalHospital = "the badger beats you up";
+    String walkHitchHikerHospital = "the hitchhiker kills you";
+    String walkShopWork = "you eat, feel great, and continue to work on time";
     String youWin = "\nYOU WIN!";
     String youLose = "\nYOU LOSE!";
     boolean indicator = false;
@@ -28,69 +26,86 @@ public class Endgame {
     
     public Endgame()
     {
-        
+                 
     }
     
-    public void displayCarFreewayHospital(){
-        System.out.println(carFreewayHospital);
-        System.out.println(youLose);
-        indicator = false;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayCarFreewayWork(){
-        System.out.println(carFreewayWork);
-        System.out.println(youWin);
-        indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayCarAnimalHospital(){
-        System.out.println(carAnimalHospital);
-        System.out.println(youLose);
-        indicator = false;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayCarAnimalWork(){
-        System.out.println(carAnimalWork);
-        System.out.println(youWin);
-        indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkAnimalWork(){
-        System.out.println(walkAnimalWork);
-        System.out.println(youWin);
-        indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkAnimalHostial(){
-        System.out.println(walkAnimalHospital);
-        System.out.println(youLose);
-        indicator = false;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkHitchHikerWork(){
-        System.out.println(walkHitchHikerWork);
-        System.out.println(youWin);
-        indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkHitchHikerHospital(){
-        System.out.println(walkHitchHikerHospital);
-        System.out.println(youLose);
-        indicator = false;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkHospitalWork(){
-        System.out.println(walkHospitalWork);
-        System.out.println(youWin);
-        indicator = true;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
-    public void displayWalkHospitalHospital(){
-        System.out.println(walkHospitalHospital);
-        System.out.println(youLose);
-        indicator = false;
-        this.displayWinLossInfo(totalWins, totalLosses, indicator);
-    }
+            public int endgameCheck(int index, int winLoss){
+                
+                
+                switch(index){
+                    
+                    case 3: if (winLoss==-2){
+                                System.out.println(carFreewayWork);
+                                System.out.println(youWin);
+                                return -2;
+                            }
+                        
+                            if (winLoss==-3) {
+                                System.out.println(carFreewayHospital);
+                                System.out.println(youLose);
+                                return -3;
+                            }
+                    
+                        
+                        
+                    case 4: if (winLoss==-2){
+                                System.out.println(carAnimalWork);
+                                System.out.println(youWin);
+                                return -2;
+                            }
+                        
+                            if (winLoss==-3) {
+                                System.out.println(carAnimalHospital);
+                                System.out.println(youLose);
+                                return -3;
+                            }
+                        
+                        
+                    case 5:if (winLoss==-2){
+                                System.out.println(walkShopWork);
+                               System.out.println(youWin);
+                               return -2;
+                            }
+                        
+                           if (winLoss==-3) {
+                               System.out.println(walkHitchHikerHospital);
+                               System.out.println(youLose);
+                               return -3;
+                            }
+                        
+                        
+                    case 6:if (winLoss==-2){
+                                System.out.println(walkAnimalWork);
+                                System.out.println(youWin);
+                                return -2;
+                        
+                            }
+                        
+                           if (winLoss==-3) {
+                               System.out.println(walkAnimalHospital);
+                               System.out.println(youLose);
+                               return -3;
+                            }
+                        
+                        
+                        
+                    
+                   
+                
+                
+                }
+        
+        return winLoss;
+        }
+    
+    
+    
+    
+    
+    
+
+
+
     
     public double displayWinLossInfo(double totalWins,double totalLosses, boolean indicator){
         if (totalWins < 0){

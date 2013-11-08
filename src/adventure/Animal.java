@@ -37,19 +37,22 @@ public class Animal {
          animalEncounter.displayStoryScene();
         }
         if (choice.equals("2")){
+            FightScene fightScene = new FightScene();
             
-            this.getFightSceneInput();
-            
+            int outcome = fightScene.badgerFightScene();
+            if (outcome==1){
+                AnimalEncounter animalEncounter = new AnimalEncounter();
+                 animalEncounter.displayStoryScene();
+                }
+                
+                
+            else{
             Hospital hospital = new Hospital();
             hospital.displayStoryScene();
+            }
         }
-        if (choice.equals("i")){
-            Player player = new Player();
-            player.displayInventory();
-            displayStoryOptions();
-            //INVENTORY IS NOT CURRENTLY WORKING OUTSIDE OF HOME CLASS, THE NEW INSTANCE OF THE
-            //CLASS DOES NOT CARRY OVER THE CHANGES MADE TO IT'S INSTANCE VARIABLES FROM THE NEW INSTANCE INSIDE HOME
-        }
+            
+
         else{ 
             System.out.println(choice+" is not a valid option.");
             displayStoryOptions();

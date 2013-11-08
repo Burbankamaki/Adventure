@@ -35,13 +35,7 @@ public class BackRoad {
             Endgame win = new Endgame();
             win.displayCarAnimalWork();
         }
-        if (choice.equals("i")){
-            Player player = new Player();
-            player.displayInventory();
-            displayStoryOptions();
-            //INVENTORY IS NOT CURRENTLY WORKING OUTSIDE OF HOME CLASS, THE NEW INSTANCE OF THE
-            //CLASS DOES NOT CARRY OVER THE CHANGES MADE TO IT'S INSTANCE VARIABLES FROM THE NEW INSTANCE INSIDE HOME
-        }
+
         else{ 
             System.out.println(choice+" is not a valid option.");
             displayStoryOptions();

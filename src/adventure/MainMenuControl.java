@@ -11,17 +11,17 @@ package adventure;
 public class MainMenuControl {
     
     
-    public int startNewGame(){
+    public static int startNewGame(){
         return 1;
         
         
     }
     
-    public int displayHelpMenu(){
+    public static int displayHelpMenu(){
         return 2;
     }
     
-    public int displayWinPercentage(){
+    public static int displayWinPercentage(){
         return 3;
     }
         

@@ -51,7 +51,7 @@ public class ScenarioControl implements Serializable {
     
     public static int endgameCheck(int index, int winLoss){
                 Endgame endgame = new Endgame();
-                int indicator =endgame.endgameCheck(index, winLoss);
+                int indicator =Endgame.endgameCheck(index, winLoss);
                 return winLoss;
     }
 

@@ -4,16 +4,17 @@
  */
 package adventure;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Burbank
  */
-public class MainMenuView {
+public class MainMenuView implements Serializable {
     
-     private static String choice;
-   private static String command;
+     
+   
            
     private final static String[][] menuItems = {
         {"1", "Begin a new game"},
@@ -21,28 +22,31 @@ public class MainMenuView {
         {"3", "View your win percentage"},      
     };
     
+    public MainMenuView(){
+    
+    }
     // Create instance of the HelpMenuControl (action) class
   MainMenuControl mainMenuControl = new MainMenuControl();
    
     
     // display the help menu and get the end users input selection
-    public int mainMenu() {       
+    public static int mainMenu() {       
         
-
+            String command;
         do {
-            this.display();
-            command = this.getCommand();
+            display();
+            command = getCommand();
             // get commaned entered
 
             switch (command) {
                 case "1":
-                    int selection=this.mainMenuControl.startNewGame();
+                    int selection=MainMenuControl.startNewGame();
                     return selection;
                 case "2":
-                    selection=this.mainMenuControl.displayHelpMenu();
+                    selection=MainMenuControl.displayHelpMenu();
                     return selection;
                 case "3":
-                    selection=this.mainMenuControl.displayWinPercentage();
+                    selection=MainMenuControl.displayWinPercentage();
                     return selection;                  
             }
         } while (!command.equals("1"));  
@@ -51,7 +55,7 @@ public class MainMenuView {
     }
 
         // displays the help menu
-    public final void display() {
+    private static void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
@@ -64,13 +68,15 @@ public class MainMenuView {
     
     
     // retrieves the command entered by the end user
-    protected final String getCommand() {
+    private static String getCommand() {
       
-            String choice;
+            
             Scanner input = new Scanner(System.in);
-        boolean valid = false;
+            String choice;
+        boolean valid;
+         valid = false;
         do {
-
+            
             choice = input.next();
             valid = validCommand(choice);
             if (!validCommand(choice)) {
@@ -85,7 +91,7 @@ public class MainMenuView {
     
     
     // determines if the command is valid
-    private boolean validCommand(String command) {
+    private static boolean validCommand(String command) {
         String[][] items = MainMenuView.menuItems;
 
         for (String[] item : MainMenuView.menuItems) {
@@ -94,6 +100,18 @@ public class MainMenuView {
             }
         }
         return false;
+    }
+
+    
+    
+    
+
+    public MainMenuControl getMainMenuControl() {
+        return mainMenuControl;
+    }
+
+    public void setMainMenuControl(MainMenuControl mainMenuControl) {
+        this.mainMenuControl = mainMenuControl;
     }
     
 }

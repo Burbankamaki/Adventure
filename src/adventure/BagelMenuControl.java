@@ -12,16 +12,15 @@ package adventure;
  */
 public class BagelMenuControl {
     
-     double total;
+     double total=0;
      String command;
      String menuItems;
      BagelMenuControl bagelMenuView;
      public String[][] purchases = new String[4][4];
-     int currentPosition = 0;
+     int currentPosition = -1;
      int nextPosition = 0;
      public double max;
-     String itemDescription;
-     String itemPrice;
+     
      double i;
      
       public BagelMenuControl() {
@@ -30,21 +29,22 @@ public class BagelMenuControl {
      
       BagelMenuControl customer = new BagelMenuControl();
       
-     public void recordPurchase(String purchases[][]) {
-         do { 
-         nextPosition = this.currentPosition + 1;
+     public void recordPurchase(String itemDescription, String itemPrice) {
+         currentPosition ++; 
+         nextPosition = this.currentPosition;
    
         
          purchases[nextPosition][0] = itemDescription;
          purchases[nextPosition][1] = itemPrice;
-         currentPosition = nextPosition;
-         }while (currentPosition<5);
+         
+        
      }
 public double findMax(){
-        for (i=0;i<5;i++){
-             max = 0;
-            double price = Double.parseDouble(this.purchases[i][2]);
-            if (nextPosition == 0){
+        double max = -Double.MAX_VALUE;
+        for (int i=0;i<5;i++){
+            double price = Double.parseDouble(this.purchases[i][1]);
+            if (max<price){
+                max=price;
                 
                 
             }
@@ -57,6 +57,7 @@ public double findMax(){
 }
          
 public void displayReceipt(){
+          max=this.findMax();
         System.out.println("The Hole Bagel Shop\n"
             + this.purchases[0][1]+"\n"
             + this.purchases[1][1]+"\n"
@@ -64,36 +65,27 @@ public void displayReceipt(){
             + this.purchases[3][1]+"\n"
             + "____________\n"
             + "Total $"+ total+"\n"
-            + "               ");
+            + "               \n"
+            +"The most expensive item on your list is $" + max);
+
 
     
 }         
     
-public double totalDue(this.purchases [0][1],this.purchases[1][1], this.purchases[2][1]){//for each
-
-    for (int i = 0; i < 5; i++) {
+public double totalDue(String [][]purchases){//for each
         
-    
-        (String purchases [][]
-        this.purchases.[3][1]){
-          total = this.purchases[0][1],this.purchases[1][1],
-                  this.purchases2][1],this.purchases[3][1];
-    
-       
-    
-
-    }              
+    for (String[]i:purchases) {
+        double price=Double.parseDouble(i[1]);
+        
+         total=total+price;
+      
     }
- return total;
-}
+    return total;
+    }
+ 
 
-public void displayTotal(){
-    
-    this.displayMax();
-          
-            
-    
-}
+
+public void displayTotal(){}
 }    
     
 

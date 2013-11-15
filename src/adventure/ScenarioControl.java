@@ -31,8 +31,8 @@ public class ScenarioControl implements Serializable {
                     
                 case 7: GetShopHours getShopHours = new GetShopHours();
                             getShopHours.showHours();
-                        //create new perchase class
-                        //run purchase
+                        BagelMenuView bagelMenuView = new BagelMenuView();
+                         bagelMenuView.getInput();
                     return -2;
                         
                         

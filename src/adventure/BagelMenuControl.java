@@ -12,7 +12,7 @@ package adventure;
  */
 public class BagelMenuControl {
     
-     double total=0;
+
      String command;
      String menuItems;
      BagelMenuControl bagelMenuView;
@@ -27,7 +27,6 @@ public class BagelMenuControl {
          
     }
      
-      BagelMenuControl customer = new BagelMenuControl();
       
      public void recordPurchase(String itemDescription, String itemPrice) {
          currentPosition ++; 
@@ -41,7 +40,7 @@ public class BagelMenuControl {
      }
 public double findMax(){
         double max = -Double.MAX_VALUE;
-        for (int i=0;i<5;i++){
+        for (int i=0;i<4;i++){
             double price = Double.parseDouble(this.purchases[i][1]);
             if (max<price){
                 max=price;
@@ -57,7 +56,8 @@ public double findMax(){
 }
          
 public void displayReceipt(){
-          max=this.findMax();
+          double finalmax=this.findMax();
+          double total=this.totalDue(purchases);
         System.out.println("The Hole Bagel Shop\n"
             + this.purchases[0][1]+"\n"
             + this.purchases[1][1]+"\n"
@@ -66,14 +66,14 @@ public void displayReceipt(){
             + "____________\n"
             + "Total $"+ total+"\n"
             + "               \n"
-            +"The most expensive item on your list is $" + max);
+            +"The most expensive item on your list is $" + finalmax);
 
 
     
 }         
     
 public double totalDue(String [][]purchases){//for each
-        
+        double total=0;
     for (String[]i:purchases) {
         double price=Double.parseDouble(i[1]);
         

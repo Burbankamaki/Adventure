@@ -48,7 +48,7 @@ public class BagelMenuView {
         
         
              int i=0;
-             this.displayMenu();
+             
              
              //gets validated selection value
             do { 
@@ -94,6 +94,8 @@ public class BagelMenuView {
              
         }while(i<4);
                     
+            customer.displayReceipt();
+            
             
     }
 

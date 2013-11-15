@@ -32,7 +32,7 @@ public class Adventure {
         
         do{
         
-        int selection=mainMenuView.mainMenu();
+        int selection=MainMenuView.mainMenu();
         
             switch (selection){
 

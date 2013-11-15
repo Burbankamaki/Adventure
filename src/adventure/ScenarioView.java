@@ -13,35 +13,38 @@ import java.util.Scanner;
 public class ScenarioView {
     Scenario scenario;
     
-    public ScenarioView(Scenario scenario) {
-        this.scenario = scenario;
+    public ScenarioView() {
+        
         
     }
 
     
-    public int getInput() {
+    public static int getInput(Scenario scenario) {
+        
         int nextScenarioIndex;
         do {
-            ScenarioControl scenarioControl = new ScenarioControl();
+           //ScenarioControl scenarioControl = new ScenarioControl();
             
             
-           
-           
-           
-            System.out.println(this.scenario.instructions+"\n1. "+this.scenario.option1Description+"\n2. "+this.scenario.option2Description);
-
-            String cmd = this.getCommand();
+           String instructions = scenario.getInstructions();
+           String option1Description = scenario.getOption1Description();
+           String option2Description = scenario.getOption2Description();
+                   
+            System.out.println(instructions+"\n1. "+option1Description+"\n2. "+option2Description);
+            
+            String cmd = getCommand();
 
             if (cmd.equals("1")){
-                 nextScenarioIndex = this.scenario.option1ScenarioIndex; 
+                 nextScenarioIndex = scenario.getOption1ScenarioIndex(); 
             }
             
             else {
-                 nextScenarioIndex = this.scenario.option2ScenarioIndex;
+                 nextScenarioIndex = scenario.getOption2ScenarioIndex();
             }
             
-             nextScenarioIndex = scenarioControl.minigameCheck(nextScenarioIndex);
-            nextScenarioIndex = scenarioControl.endgameCheck(this.scenario.currentIndex,nextScenarioIndex);
+             nextScenarioIndex = ScenarioControl.minigameCheck(nextScenarioIndex);
+             int currentIndex = scenario.getCurrentIndex();
+            nextScenarioIndex = ScenarioControl.endgameCheck(currentIndex,nextScenarioIndex);
             
             
             if (nextScenarioIndex==-2 | nextScenarioIndex==-3){
@@ -51,9 +54,9 @@ public class ScenarioView {
             //fix and implement endgame   
             
             Scenario nextScenario = Adventure.listOfScenarios[nextScenarioIndex];
-            ScenarioView nextScenarioView = new ScenarioView(nextScenario);
+            ScenarioView nextScenarioView = new ScenarioView();
             
-            nextScenarioIndex=nextScenarioView.getInput();
+            nextScenarioIndex=nextScenarioView.getInput(nextScenario);
             
             if (nextScenarioIndex==-2 | nextScenarioIndex==-3){
                    return nextScenarioIndex;
@@ -69,7 +72,7 @@ public class ScenarioView {
     
     
     
-        protected final String getCommand() {
+        private static final String getCommand() {
       
             String choice;
             Scanner input = new Scanner(System.in);
@@ -90,7 +93,7 @@ public class ScenarioView {
     
     
     // determines if the command is valid
-    private boolean validCommand(String command) {    
+    private static boolean validCommand(String command) {    
             if (command.equals("1")|command.equals("2")) {
                 return true;
             }

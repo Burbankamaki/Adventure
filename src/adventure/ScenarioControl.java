@@ -4,20 +4,28 @@
  */
 package adventure;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Motoko Kusanagi
  */
-public class ScenarioControl {
+public class ScenarioControl implements Serializable {
+    
+    public ScenarioControl(){
+    
+    }
+    
+        private static double price;
     
     
-    public int minigameCheck(int index){
+    public static int minigameCheck(int index){
         
         switch (index){
                 
                 case 1: GetGasPrice getGasPrice = new GetGasPrice();
-                        double price =getGasPrice.getGasPrice();
-                    System.out.println("you paid $"+price+"for gas and continue on your way to work.");
+                        price =getGasPrice.getGasPrice();
+                    System.out.println("you paid $"+price+" for gas and continue on your way to work.");
                     return 1;
                     
                     
@@ -41,10 +49,21 @@ public class ScenarioControl {
     }
     
     
-    public int endgameCheck(int index, int winLoss){
+    public static int endgameCheck(int index, int winLoss){
                 Endgame endgame = new Endgame();
                 int indicator =endgame.endgameCheck(index, winLoss);
                 return winLoss;
     }
+
+    public static double getPrice() {
+        return price;
+    }
+
+    public static void setPrice(double price) {
+        ScenarioControl.price = price;
+    }
+    
+    
+    
     
 }

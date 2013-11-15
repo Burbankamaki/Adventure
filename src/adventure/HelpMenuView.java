@@ -24,7 +24,7 @@ public class HelpMenuView {
     };
     
     // Create instance of the HelpMenuControl (action) class
-  HelpMenuControl helpMenuControl = new HelpMenuControl();
+      HelpMenuControl helpMenuControl = new HelpMenuControl();
    
     
     // display the help menu and get the end users input selection
@@ -105,7 +105,7 @@ public class HelpMenuView {
     
     
     
-    
+
     
     
 }

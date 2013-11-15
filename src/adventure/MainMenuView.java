@@ -12,8 +12,8 @@ import java.util.Scanner;
  */
 public class MainMenuView {
     
-      String choice;
-    String command;
+     private static String choice;
+   private static String command;
            
     private final static String[][] menuItems = {
         {"1", "Begin a new game"},

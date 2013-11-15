@@ -20,7 +20,7 @@ public class FightScene {
         System.out.println("ok! lets fight the badger!\n first off, how many health points do you have?\n");
         
         
-       do{ Scanner input = new Scanner(System.in);
+       while (!valid == true){ Scanner input = new Scanner(System.in);
         String healthPoints = input.next();
         String check = "[0-9]+";
         if (!healthPoints.matches(check)){
@@ -33,7 +33,7 @@ public class FightScene {
             continue;
             }
          valid = true;
-       } while (!valid == true);
+       } ;
         
             
         double damage = healthPoint/4;

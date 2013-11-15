@@ -34,7 +34,7 @@ public class BagelMenuView {
     } 
     
     public void displayMenu(){
-        BagelMenuView customer = new BagelMenuView();
+        BagelMenuView bagelMenuView = new BagelMenuView();
          System.out.println("Welcome to The Hole Bagel Shop!\n"
                  +"Please choose up to four items off the menu by entering the \n" 
                  +"number associated with the item you wish to purchase. Enter \"q\"\n"
@@ -44,58 +44,50 @@ public class BagelMenuView {
      
          }
     }    
-    public void getInput(){
+    public void getInput(){//change to if else if 
         
-        do {
+        
+        
              this.displayMenu();
              selection = this.getSelection();
              //gets validated selection value
              Scanner input = new Scanner(System.in);
-             switch (selection){
+             
+        while (!selection.equals("q"));
+        
+             this.displayMenu();
+             
+             if (selection.equals("1"))
                  
-                 case "1":
-                     
-                    customer.recordPurchase(String[][] menuItems[0][1], menuItems[0][2]);
-                     break;
-                     
-                 case "2":
+                 
+                 BagelMenuView.recordPurchase(String[][] menuItems[0][1], menuItems[0][2]);
+                
+             else if (selection.equals("2"))
                      
                      
-                     break;
-                     
-                 case "3":
+             else if (selection.equals("3"))
                      
                      
-                     break;
+                   
                      
-                 case "4":
+             else if (selection.equals("4"))
                      
-                     
-                     break;
-                      
-                 case "5":
+                   
+             else if (selection.equals("5")) 
                      
                      
-                     break;
-                     
-                 case "6":
-                     
-                     
-                     break;
-                     
-                 case "7":
-                     
-                     
-                     break;
-                     
-                 case "8":
-                     
-                     
-                     break; 
-             }
-             }while (!selection.equals("q"));
+             else if (selection.equals("6"))
+                
+             else if (selection.equals("7"))
+             
+             
+             else if  (selection.equals("8"))
+             
+             else
+                     System.out.println("Please select a valid number from the menu.");
+        } 
                     
-        }     
+             
                
     protected final String getSelection() {
               

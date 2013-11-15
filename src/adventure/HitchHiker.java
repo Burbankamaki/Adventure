@@ -36,7 +36,7 @@ public class HitchHiker {
             Endgame endgame = new Endgame();
             endgame.displayWalkHitchHikerHospital();
         }
-        if (choice.equals("2")){
+        else if (choice.equals("2")){
             Endgame endgame = new Endgame();
             endgame.displayWalkHitchHikerWork();
         }

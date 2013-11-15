@@ -19,7 +19,7 @@ public class Walk {
             + "\n1.Walk through the nature preserve."
             + "\n2.Head to the bagel shop.";
     String choice;
-    
+    Boolean marker;
     public void displayStoryScene(){
         System.out.println(walkStory);
         this.displayStoryOptions();
@@ -32,14 +32,21 @@ public class Walk {
            Animal animal = new Animal();
             animal.displayStoryScene();
         }
-        if (choice.equals("2")){
+        else if (choice.equals("2")){
            HitchHiker hitchHiker = new HitchHiker();
            hitchHiker.displayStoryScene();
         }
         else{ 
             System.out.println(choice+" is not a valid option.");
             displayStoryOptions();
-        }
     }
-    
+    }   
+    public void displayText(){
+        marker = true;
+        while (marker==true){
+            System.out.println("Good Job!");
+            
+    }
+    }
 }
+

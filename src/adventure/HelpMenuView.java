@@ -73,21 +73,21 @@ public class HelpMenuView {
     // retrieves the command entered by the end user
     protected final String getCommand() {
       
-            String choice;
+            String command;
             Scanner input = new Scanner(System.in);
         boolean valid = false;
         do {
 
-            choice = input.next();
-            valid = validCommand(choice);
-            if (!validCommand(choice)) {
+            command = input.next();
+            valid = validCommand(command);
+            if (!validCommand(command)) {
                 System.out.println("Invalid command. Please enter a valid command.");
                 continue;
             }
                 
         } while (!valid);
         
-        return choice;
+        return command;
     }
     
     

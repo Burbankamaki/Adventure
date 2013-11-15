@@ -13,8 +13,8 @@ package adventure;
 public class GetGasPrice {
     
 
-    double gallons = 25;
-    double price;
+    private double gallons = 25;
+    private double price;
     public double getGasPrice (){
        System.out.println("you take off in your car for work, but notice the gas is low\n you pull into your neighborhood gas station and notice you have 40 dollars cash.\ngas is currently $3.75 a gallon\nHow many gallons of gas do you want to buy?");
      while (3.75 * gallons > 40){  

@@ -4,6 +4,7 @@
  */
 package adventure;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,15 +12,19 @@ import java.util.Scanner;
  *
  * @author lisapage
  */
-public class Player {
+public class Player implements Serializable {
+    
+    public Player(){
+    
+    }
     
     
-    String [] items = {"wallet", "keys", "phone", "lunch"};
-    String [] currentItems= new String[4];
-    ArrayList cItems= new ArrayList();
-    int x =0;
-    double totalWins=0;
-    double totalLosses=0;
+    private static String [] items = {"wallet", "keys", "phone", "lunch"};
+    private static String [] currentItems= new String[4];
+    private static ArrayList cItems= new ArrayList();
+    private static int x =0;
+    private static double totalWins=0;
+    private static double totalLosses=0;
     
     public void getInventoryItems(){
             for (int i=0; i<4; i++ ){
@@ -92,7 +97,7 @@ public class Player {
     
     
     
-        public void displayWinLossInfo(){
+        public static void displayWinLossInfo(){
         
         
         System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
@@ -105,7 +110,58 @@ public class Player {
         
     }
 
+    public String[] getItems() {
+        return items;
+    }
+
+    public void setItems(String[] items) {
+        this.items = items;
+    }
+
+    public String[] getCurrentItems() {
+        return currentItems;
+    }
+
+    public void setCurrentItems(String[] currentItems) {
+        this.currentItems = currentItems;
+    }
+
+    public ArrayList getcItems() {
+        return cItems;
+    }
+
+    public void setcItems(ArrayList cItems) {
+        this.cItems = cItems;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public double getTotalWins() {
+        return totalWins;
+    }
+
+    public void setTotalWins(double totalWins) {
+        this.totalWins = totalWins;
+    }
+
+    public double getTotalLosses() {
+        return totalLosses;
+    }
+
+    public void setTotalLosses(double totalLosses) {
+        this.totalLosses = totalLosses;
+    }
+
     
+        
+        
+        
     
     
 }

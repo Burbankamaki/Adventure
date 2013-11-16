@@ -23,14 +23,14 @@ public class ScenarioControl implements Serializable {
         
         switch (index){
                 
-                case 1: GetGasPrice getGasPrice = new GetGasPrice();
-                        price =getGasPrice.getGasPrice();
+                case 1: 
+                        price =GetGasPrice.getGasPrice();
                     System.out.println("you paid $"+price+" for gas and continue on your way to work.");
                     return 1;
                     
                     
-                case 7: GetShopHours getShopHours = new GetShopHours();
-                            getShopHours.showHours();
+                case 7: 
+                            GetShopHours.showHours();
                         BagelMenuView bagelMenuView = new BagelMenuView();
                          bagelMenuView.getInput();
                     return -2;
@@ -38,8 +38,8 @@ public class ScenarioControl implements Serializable {
                         
                 case 8: //create new weight class
                         //run find weight
-                        FightScene fightScene = new FightScene();
-                                int fightOutcome=fightScene.badgerFightScene();
+                       
+                                int fightOutcome=FightScene.badgerFightScene();
                                 return fightOutcome;
                     
                 default: return index;

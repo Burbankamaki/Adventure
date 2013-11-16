@@ -4,6 +4,7 @@
  */
 package adventure;
 
+import java.io.Serializable;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -11,12 +12,16 @@ import java.util.Random;
  *
  * @author Motoko Kusanagi
  */
-public class FightScene {
+public class FightScene implements Serializable {
     
-    boolean valid = false;
-    int healthPoint;
+    public FightScene(){
     
-    public int badgerFightScene(){
+    }
+    
+    private static boolean valid = false;
+    private static int healthPoint;
+    
+    public static int badgerFightScene(){
         System.out.println("ok! lets fight the badger!\n first off, how many health points do you have?\n");
         
         
@@ -33,7 +38,7 @@ public class FightScene {
             continue;
             }
          valid = true;
-       } ;
+       }
         
             
         double damage = healthPoint/4;
@@ -79,5 +84,23 @@ public class FightScene {
     
     
     }
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public void setValid(boolean valid) {
+        FightScene.valid = valid;
+    }
+
+    public int getHealthPoint() {
+        return healthPoint;
+    }
+
+    public void setHealthPoint(int healthPoint) {
+        FightScene.healthPoint = healthPoint;
+    }
+ 
+    
     
 }

@@ -5,17 +5,23 @@ package adventure;
  * and open the template in the editor.
  */
 
+import java.io.Serializable;
 /**
  *
  * @author lisapage
  */ import java.util.Scanner;
  
-public class GetGasPrice {
+public class GetGasPrice implements Serializable {
+    
+    public GetGasPrice(){
+    
+    }
     
 
-    private double gallons = 25;
-    private double price;
-    public double getGasPrice (){
+    private static double gallons = 25;
+    private static double price;
+    
+    public static double getGasPrice (){
        System.out.println("you take off in your car for work, but notice the gas is low\n you pull into your neighborhood gas station and notice you have 40 dollars cash.\ngas is currently $3.75 a gallon\nHow many gallons of gas do you want to buy?");
      while (3.75 * gallons > 40){  
         
@@ -49,4 +55,24 @@ public class GetGasPrice {
      price = 3.75 * gallons;
      return price;
    }
+
+    public double getGallons() {
+        return gallons;
+    }
+
+    public void setGallons(double gallons) {
+        this.gallons = gallons;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
+    
+    
+    
 }

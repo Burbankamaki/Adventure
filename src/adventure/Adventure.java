@@ -4,18 +4,19 @@
  */
 package adventure;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author lisapage
  */
-public class Adventure {
+public class Adventure implements Serializable {
     
     
-    public static Scenario[] listOfScenarios = new Scenario[7];
-   String name;//Instance variables that we call in our functions.
-   final String instructions = "The object of the game is to arrive at work successfully. You will encounter obstacles along the way that must\nbe overcome to complete the game. To select an action, type the number assigned to the desired option and hit\nenter. Proceed forward until the game ends in disaster, or you arrive at work and win the game.\n at any time, enter 'i' to display your inventory.\n";
+    private static Scenario[] listOfScenarios = new Scenario[7];
+   private String name;
+   private String instructions = "The object of the game is to arrive at work successfully. You will encounter obstacles along the way that must\nbe overcome to complete the game. To select an action, type the number assigned to the desired option and hit\nenter. Proceed forward until the game ends in disaster, or you arrive at work and win the game.\n at any time, enter 'i' to display your inventory.\n";
     /**
      * @param args the command line arguments
      */
@@ -25,7 +26,7 @@ public class Adventure {
         MainMenuView mainMenuView = new MainMenuView();
         
         
-        myGame.getName();
+        myGame.getPlayerName();
         myGame.displayHelp();
         
         myGame.createScenarios(listOfScenarios);
@@ -78,13 +79,13 @@ public class Adventure {
     
     
     
-    public void getName() {
+    private void getPlayerName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name.");
         this.name = input.next();
         
     }
-    public void displayHelp(){
+    private void displayHelp(){
         System.out.println("\nWecome " + this.name + "\n");
         System.out.println(this.instructions);
     }
@@ -162,6 +163,32 @@ private void createScenarios(Scenario[] listOfScenarios) {
         
         
     }
+
+    public static Scenario[] getListOfScenarios() {
+        return listOfScenarios;
+    }
+
+    public static void setListOfScenarios(Scenario[] listOfScenarios) {
+        Adventure.listOfScenarios = listOfScenarios;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
     
+
+
        
 }

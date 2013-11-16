@@ -4,16 +4,21 @@
  */
 package adventure;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Motoko Kusanagi
  */
-public class GetShopHours {
+public class GetShopHours implements Serializable {
+    
+    public GetShopHours(){
+    
+    }
     
     
-      String shopHours[][] = {
+      private static String shopHours[][] = {
         {"Sunday", "12pm-5pm"},
         {"Monday", "9am-5pm"},
         {"Tuesday", "7am-5pm"},
@@ -22,12 +27,14 @@ public class GetShopHours {
         {"Friday", "9am-5pm"},
         {"Saturday", "10am-5pm"},
     };
+     private static String day;
     
     
-    public void showHours(){
+    public static  void showHours(){
         System.out.println("what day is it today? we will see if the bagel shop is open!");
     
-        String day = getCommand();
+         
+        day = getCommand();
         for (String[] i: shopHours){
            if (i[0].equalsIgnoreCase(day)){
             System.out.println("the shop is open on "+day+" from "+i[1]+
@@ -42,7 +49,7 @@ public class GetShopHours {
  
     
    // retrieves the command entered by the end user
-    protected final String getCommand() {
+     private static String getCommand() {
       
             String choice;
             Scanner input = new Scanner(System.in);
@@ -63,16 +70,28 @@ public class GetShopHours {
     
     
     // determines if the command is valid
-    private boolean validCommand(String command) {
-        String[][] items = this.shopHours;
-
-        for (String[] item : this.shopHours) {
+    private static boolean validCommand(String command) {
+        
+        for (String[] item : GetShopHours.shopHours) {
             if (item[0].equalsIgnoreCase(command)) {
                 return true;
             }
         }
         return false;
     }
+
+    public static String[][] getShopHours() {
+        return shopHours;
+    }
+
+    public static void setShopHours(String[][] shopHours) {
+        GetShopHours.shopHours = shopHours;
+    }
+    
+    
+    
+    
+    
     
     }
     

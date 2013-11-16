@@ -50,10 +50,9 @@ public class ScenarioView {
             if (nextScenarioIndex==-2 | nextScenarioIndex==-3){
                    return nextScenarioIndex;
             }
- 
-            //fix and implement endgame   
-            
-            Scenario nextScenario = Adventure.listOfScenarios[nextScenarioIndex];
+            //fix and implement endgame
+            Scenario[] scenarioArray = Adventure.getListOfScenarios();
+            Scenario nextScenario = scenarioArray[nextScenarioIndex];
             ScenarioView nextScenarioView = new ScenarioView();
             
             nextScenarioIndex=nextScenarioView.getInput(nextScenario);

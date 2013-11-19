@@ -8,17 +8,34 @@ package adventure;
  *
  * @author lisapage
  */import java.util.Scanner;
+   import java.io.Serializable;
 
 public class BagelMenuView {
     
-    int i;
-    String selection;
+    private int i;
+    private String selection;
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
+
+    public BagelMenuControl getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(BagelMenuControl customer) {
+        this.customer = customer;
+    }
     BagelMenuControl customer = new BagelMenuControl();
    
     
       
     
-    public final static String[][] menuItems = {
+   private final static String[][] menuItems = {
         {"1", "Blueberry Bagel","2.95"},
         {"2", "Strawberry Bagel", "2.95"}, 
         {"3", "Everything Bagel", "2.95"},
@@ -28,12 +45,20 @@ public class BagelMenuView {
         {"7", "Ham and Swiss Bagel", "4.95"},
         {"8", "Roast Beef and Cheddar Bagel", "4.95"},
     };
+
+    public void setSelection(String selection) {
+        this.selection = selection;
+    }
+
+    public static String[][] getMenuItems() {
+        return menuItems;
+    }
             
      public BagelMenuView() {
          
     } 
     
-    public void displayMenu(){
+    private void displayMenu(){
         BagelMenuView bagelMenuView = new BagelMenuView();
          System.out.println("Welcome to The Hole Bagel Shop!\n"
                  +"Please choose up to four items off the menu by entering the \n" 
@@ -44,7 +69,7 @@ public class BagelMenuView {
      
          }
     }    
-    public void getInput(){//change to if else if 
+    private void getInput(){//change to if else if 
         
         
              int i=0;
@@ -102,7 +127,7 @@ public class BagelMenuView {
                     
              
                
-    public String getSelection () {
+     private String getSelection () {
               
             String choice;
             Scanner input = new Scanner(System.in);

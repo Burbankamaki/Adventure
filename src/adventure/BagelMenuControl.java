@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package adventure;
-
+import java.io.Serializable;
 
 
 /**
@@ -13,15 +13,14 @@ package adventure;
 public class BagelMenuControl {
     
 
-     String command;
-     String menuItems;
-     BagelMenuControl bagelMenuView;
-     public String[][] purchases = new String[4][4];
-     int currentPosition = -1;
-     int nextPosition = 0;
-     public double max;
-     
-     double i;
+     private String command;
+     private String menuItems;
+     private BagelMenuControl bagelMenuView;
+     private String[][] purchases = new String[4][4];
+     private int currentPosition = -1;
+     private int nextPosition = 0;
+     private double max;
+     private double i;
      
       public BagelMenuControl() {
          
@@ -45,15 +44,75 @@ public double findMax(){
             if (max<price){
                 max=price;
                 
-                
             }
-            
-        
-     
-        
+       
         }
         return max;
 }
+
+    public String getCommand() {
+        return command;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
+
+    public String getMenuItems() {
+        return menuItems;
+    }
+
+    public void setMenuItems(String menuItems) {
+        this.menuItems = menuItems;
+    }
+
+    public BagelMenuControl getBagelMenuView() {
+        return bagelMenuView;
+    }
+
+    public void setBagelMenuView(BagelMenuControl bagelMenuView) {
+        this.bagelMenuView = bagelMenuView;
+    }
+
+    public String[][] getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(String[][] purchases) {
+        this.purchases = purchases;
+    }
+
+    public int getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public void setCurrentPosition(int currentPosition) {
+        this.currentPosition = currentPosition;
+    }
+
+    public int getNextPosition() {
+        return nextPosition;
+    }
+
+    public void setNextPosition(int nextPosition) {
+        this.nextPosition = nextPosition;
+    }
+
+    public double getMax() {
+        return max;
+    }
+
+    public void setMax(double max) {
+        this.max = max;
+    }
+
+    public double getI() {
+        return i;
+    }
+
+    public void setI(double i) {
+        this.i = i;
+    }
          
 public void displayReceipt(){
           double finalmax=this.findMax();
@@ -66,10 +125,7 @@ public void displayReceipt(){
             + "____________\n"
             + "Total $"+ total+"\n"
             + "               \n"
-            +"The most expensive item on your list is $" + finalmax);
-
-
-    
+            +"The most expensive item on your list is $" + finalmax);    
 }         
     
 public double totalDue(String [][]purchases){//for each
@@ -82,10 +138,7 @@ public double totalDue(String [][]purchases){//for each
     }
     return total;
     }
- 
 
-
-public void displayTotal(){}
 }    
     
 

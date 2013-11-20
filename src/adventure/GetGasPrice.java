@@ -23,7 +23,7 @@ public class GetGasPrice implements Serializable {
     
     public static double getGasPrice (){
        System.out.println("you take off in your car for work, but notice the gas is low\n you pull into your neighborhood gas station and notice you have 40 dollars cash.\ngas is currently $3.75 a gallon\nHow many gallons of gas do you want to buy?");
-     while (3.75 * gallons > 40){  
+     do{  
         
         Scanner input = new Scanner(System.in);
         String gallonsString = input.next();
@@ -51,7 +51,7 @@ public class GetGasPrice implements Serializable {
         
         
         
-     }
+     } while (3.75 * gallons > 40);
      price = 3.75 * gallons;
      return price;
    }

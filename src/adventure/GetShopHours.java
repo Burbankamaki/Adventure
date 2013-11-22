@@ -5,20 +5,20 @@
 package adventure;
 
 import java.io.Serializable;
-import java.util.Scanner;
+
 
 /**
  *
  * @author Motoko Kusanagi
  */
-public class GetShopHours implements Serializable {
+public class GetShopHours extends Menu implements Serializable {
     
     public GetShopHours(){
-    
+     super(GetShopHours.shopHours);
     }
     
     
-      private static String shopHours[][] = {
+      private final static String shopHours[][] = {
         {"Sunday", "12pm-5pm"},
         {"Monday", "9am-5pm"},
         {"Tuesday", "7am-5pm"},
@@ -29,8 +29,8 @@ public class GetShopHours implements Serializable {
     };
      private static String day;
     
-    
-    public static  void showHours(){
+    @Override
+    public void getInput(){
         System.out.println("what day is it today? we will see if the bagel shop is open!");
     
          
@@ -48,45 +48,24 @@ public class GetShopHours implements Serializable {
     
  
     
-   // retrieves the command entered by the end user
-     private static String getCommand() {
-      
-            String choice;
-            Scanner input = new Scanner(System.in);
-        boolean valid = false;
-        do {
 
-            choice = input.next();
-            valid = validCommand(choice);
-            if (!validCommand(choice)) {
-                System.out.println("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return choice;
-    }
     
     
-    // determines if the command is valid
-    private static boolean validCommand(String command) {
-        
-        for (String[] item : GetShopHours.shopHours) {
-            if (item[0].equalsIgnoreCase(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
+ 
 
     public static String[][] getShopHours() {
         return shopHours;
     }
 
-    public static void setShopHours(String[][] shopHours) {
-        GetShopHours.shopHours = shopHours;
+    public static String getDay() {
+        return day;
     }
+
+    public static void setDay(String day) {
+        GetShopHours.day = day;
+    }
+
+
     
     
     

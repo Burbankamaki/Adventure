@@ -10,7 +10,11 @@ package adventure;
  */import java.util.Scanner;
    import java.io.Serializable;
 
-public class BagelMenuView {
+public class BagelMenuView extends Menu{
+    
+    public BagelMenuView() {
+         super(BagelMenuView.bagelMenuItems);
+    } 
     
     private int i;
     private String selection;
@@ -35,7 +39,7 @@ public class BagelMenuView {
     
       
     
-   private final static String[][] menuItems = {
+   private final static String[][] bagelMenuItems = {
         {"1", "Blueberry Bagel","2.95"},
         {"2", "Strawberry Bagel", "2.95"}, 
         {"3", "Everything Bagel", "2.95"},
@@ -51,12 +55,10 @@ public class BagelMenuView {
     }
 
     public static String[][] getMenuItems() {
-        return menuItems;
+        return bagelMenuItems;
     }
             
-     public BagelMenuView() {
-         
-    } 
+     
     
     private void displayMenu(){
         BagelMenuView bagelMenuView = new BagelMenuView();
@@ -65,11 +67,12 @@ public class BagelMenuView {
                  +"number associated with the item you wish to purchase. Enter \"q\"\n"
                  +"at any time to finish ordering");
          for (i=0;i<5;i++){
-         System.out.println(menuItems[i][0] + menuItems[i][1] + menuItems[i][2]);
+         System.out.println(bagelMenuItems[i][0] + bagelMenuItems[i][1] + bagelMenuItems[i][2]);
      
          }
-    }    
-    private void getInput(){//change to if else if 
+    }
+    @Override
+    public void getInput(){//change to if else if 
         
         
              int i=0;
@@ -80,41 +83,41 @@ public class BagelMenuView {
         
              i+=1;
              this.displayMenu();
-             selection = this.getSelection();
+             selection = this.getCommand();
              
              if (selection.equals("1")) {
                  
                  
-                 customer.recordPurchase( menuItems[0][1], menuItems[0][2]);
+                 customer.recordPurchase( bagelMenuItems[0][1], bagelMenuItems[0][2]);
              }
                 
              else if  (selection.equals("2")){
-                 customer.recordPurchase( menuItems[1][1], menuItems[1][2]);    
+                 customer.recordPurchase(bagelMenuItems[1][1], bagelMenuItems[1][2]);    
              }       
              else if (selection.equals("3")) {
                      
-                  customer.recordPurchase( menuItems[2][1], menuItems[2][2]);   
+                  customer.recordPurchase( bagelMenuItems[2][1], bagelMenuItems[2][2]);   
              }     
                      
              else if (selection.equals("4")){
                      
-                   customer.recordPurchase( menuItems[3][1], menuItems[3][2]);
+                   customer.recordPurchase( bagelMenuItems[3][1], bagelMenuItems[3][2]);
              }      
              else if (selection.equals("5")) {
                      
-                   customer.recordPurchase( menuItems[4][1], menuItems[4][2]); 
+                   customer.recordPurchase( bagelMenuItems[4][1], bagelMenuItems[4][2]); 
              }      
              else if (selection.equals("6")){
-                   customer.recordPurchase( menuItems[5][1], menuItems[5][2]);
+                   customer.recordPurchase( bagelMenuItems[5][1], bagelMenuItems[5][2]);
              }      
              else if (selection.equals("7")){
              
-                   customer.recordPurchase( menuItems[6][1], menuItems[6][2]);
+                   customer.recordPurchase( bagelMenuItems[6][1], bagelMenuItems[6][2]);
              }      
              else {
                  
             
-                   customer.recordPurchase( menuItems[7][1], menuItems[7][2]);
+                   customer.recordPurchase( bagelMenuItems[7][1], bagelMenuItems[7][2]);
              }      
              
         }while(i<4);
@@ -126,36 +129,9 @@ public class BagelMenuView {
 
                     
              
-               
-     private String getSelection () {
-              
-            String choice;
-            Scanner input = new Scanner(System.in);
-        boolean valid = false;
-        do {
 
-            choice = input.next();
-            valid = validCommand(choice);
-            if (!validCommand(choice)) {
-                System.out.println("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return choice;
-    }
     
-      private boolean validCommand(String selection) {
-        String[][] items = BagelMenuView.menuItems;
-
-        for (String[] item : this.menuItems) {
-            if (item[0].equals(selection)) {
-                return true;
-            }
-        }
-        return false;
-      }
+     
       
       public void displayMax (){
           double max = customer.findMax();

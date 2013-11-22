@@ -22,7 +22,7 @@ public class Adventure implements Serializable {
      */
     public static void main(String[] args) {
         Adventure myGame = new Adventure();
-        Player player = new Player();
+        
         MainMenuView mainMenuView = new MainMenuView();
         
         
@@ -33,33 +33,12 @@ public class Adventure implements Serializable {
         
         do{
         
-        int selection=MainMenuView.mainMenu();
+            
+            
+        mainMenuView.getInput();
         
-            switch (selection){
-
-                    case 1: ScenarioView scenario = new ScenarioView();
-                        int winIndex;
-                        winIndex = scenario.getInput(listOfScenarios[0]);
-                        if (winIndex==-2){ double totalWins=player.getTotalWins();
-                                            totalWins++;
-                                           player.setTotalWins(totalWins);
-                                           break;
-                        }
-
-                        
-                        if (winIndex==-3){
-                                             double totalLosses=player.getTotalLosses();
-                                             totalLosses++;
-                                             player.setTotalLosses(totalLosses);
-                                             break;
-                        }
-
-                case 2: HelpMenuView helpMenuView = new HelpMenuView();
-                       helpMenuView.getInput();
-                        break;
-                case 3:player.displayWinLossInfo();
-                        break;
-            }
+            
+            
             
             
         

@@ -4,30 +4,28 @@
  */
 package adventure;
 
-import java.util.Scanner;
 
-/**
- *
- * @author Motoko Kusanagi
- */
-public class HelpMenuView {
+
+public class HelpMenuView extends Menu{
     
     String choice;
     String command;
            
-    private final static String[][] menuItems = {
+    private final static String[][] helpMenuItems = {
         {"a", "instructions to play the game"},
         {"b", "what to do if you encounter an error"}, 
         {"c", "change your user name"},
         {"d", "instructions for the mini-game"},
         {"q", "quit and return to main menu"},       
     };
-    
+     
+    public HelpMenuView(){
+        super(HelpMenuView.helpMenuItems);
+    }
     // Create instance of the HelpMenuControl (action) class
       HelpMenuControl helpMenuControl = new HelpMenuControl();
-   
-    
-    // display the help menu and get the end users input selection
+  
+    @Override// display the help menu and get the end users input selection
     public void getInput() {       
         
 
@@ -62,50 +60,23 @@ public class HelpMenuView {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+        for (int i = 0; i < HelpMenuView.helpMenuItems.length; i++) {
+            System.out.println("\t   " + helpMenuItems[i][0] + "\t" + helpMenuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
     }
 
     
     
-    // retrieves the command entered by the end user
-    protected final String getCommand() {
-      
-            String command;
-            Scanner input = new Scanner(System.in);
-        boolean valid = false;
-        do {
-
-            command = input.next();
-            valid = validCommand(command);
-            if (!validCommand(command)) {
-                System.out.println("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return command;
+    
     }
     
     
-    // determines if the command is valid
-    private boolean validCommand(String command) {
-        String[][] items = HelpMenuView.menuItems;
-
-        for (String[] item : HelpMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
-    }
+  
+    
     
     
     
 
     
-    
-}
+  

@@ -16,20 +16,25 @@ public class MainMenuView extends Menu implements Serializable {
      
    
            
-    private final static String[][] mainMenuItems = {
-        {"1", "Begin a new game"},
-        {"2", "Go to the Help Menu"}, 
-        {"3", "View your win percentage"},      
-    };
+   
     Player player = new Player();
     
     public MainMenuView(){
       super(MainMenuView.mainMenuItems);
     }
    
+    
+    
+     private final static String[][] mainMenuItems = {
+        {"1", "Begin a new game"},
+        {"2", "Go to the Help Menu"}, 
+        {"3", "View your win percentage"},      
+    };
+    
+    
     // display the help menu and get the end users input selection
     @Override
-    public void getInput() {       
+    public  void getInput() {       
         
             String command;
         do {

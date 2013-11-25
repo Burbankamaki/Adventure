@@ -26,7 +26,7 @@ public abstract class Menu {
     
     }
     
-  protected final String getCommand() {
+  protected String getCommand() {
       
             String command;
             Scanner input = new Scanner(System.in);

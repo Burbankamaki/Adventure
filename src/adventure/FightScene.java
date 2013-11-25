@@ -12,16 +12,28 @@ import java.util.Random;
  *
  * @author Motoko Kusanagi
  */
-public class FightScene implements Serializable {
+public class FightScene extends Minigame implements Serializable {
     
     public FightScene(){
-    
+            super(FightScene.fightMinigameAlert);
     }
     
     private static boolean valid = false;
     private static int healthPoint;
+    private final static String fightMinigameAlert="MINIGAME TIME!!  BADGER FIGHT!!";
+    
+    @Override
+ public void polymorphExample(){
+                    System.out.println("this is an example of polymorphism, this code can be differnet than the other examples in the other subclasses");
+                            int example=1+1; //different code!  
+                            int answer=example*3;
+                            System.out.println(answer);
+                    }
+
     
     public static int badgerFightScene(){
+        minigameAlert(fightMinigameAlert);
+        
         System.out.println("ok! lets fight the badger!\n first off, how many health points do you have?\n");
         
         

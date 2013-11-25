@@ -4,6 +4,7 @@
  */
 package adventure;
 
+import byui260.adventure.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 

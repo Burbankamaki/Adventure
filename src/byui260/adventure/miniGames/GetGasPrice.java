@@ -11,15 +11,27 @@ import java.io.Serializable;
  * @author lisapage
  */ import java.util.Scanner;
  
-public class GetGasPrice implements Serializable {
+public class GetGasPrice extends Minigame implements Serializable {
     
     public GetGasPrice(){
-    
+        super(FightScene.fightMinigameAlert);
     }
     
 
     private static double gallons = 25;
     private static double price;
+    public final static String fightMinigameAlert="MINIGAME TIME!!  GAS STATION!!";
+    
+    
+    
+        @Override
+ public void polymorphExample(){
+                    System.out.println("this is an example of polymorphism, this code can be differnet than the other examples in the other subclasses");
+                            int example=(3*5)/10; //different code!  
+                            int answer=example*3;
+                            System.out.println(answer);
+                    }
+    
     
     public static double getGasPrice (){
        System.out.println("you take off in your car for work, but notice the gas is low\n you pull into your neighborhood gas station and notice you have 40 dollars cash.\ngas is currently $3.75 a gallon\nHow many gallons of gas do you want to buy?");

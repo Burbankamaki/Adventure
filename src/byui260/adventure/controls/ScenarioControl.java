@@ -4,10 +4,10 @@
  */
 package byui260.adventure.controls;
 
-import adventure.Endgame;
-import adventure.FightScene;
-import adventure.GetGasPrice;
-import adventure.GetShopHours;
+import byui260.adventure.entities.Endgame;
+import byui260.adventure.miniGames.FightScene;
+import byui260.adventure.miniGames.GetGasPrice;
+import byui260.adventure.miniGames.GetShopHours;
 import byui260.adventure.views.BagelMenuView;
 import java.io.Serializable;
 

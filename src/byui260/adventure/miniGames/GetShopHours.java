@@ -2,7 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adventure;
+package byui260.adventure.miniGames;
+
 
 import byui260.adventure.views.Menu;
 import java.io.Serializable;
@@ -29,6 +30,12 @@ public class GetShopHours extends Menu implements Serializable {
         {"Saturday", "10am-5pm"},
     };
      private static String day;
+     
+     
+     
+    @Override
+     public void display(){}
+     
     
     @Override
     public void getInput(){

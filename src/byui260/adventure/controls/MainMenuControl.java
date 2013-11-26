@@ -4,8 +4,8 @@
  */
 package byui260.adventure.controls;
 
-import adventure.Player;
-import adventure.Scenario;
+import byui260.adventure.entities.Player;
+import byui260.adventure.entities.Scenario;
 import byui260.adventure.views.ScenarioView;
 import byui260.adventure.views.HelpMenuView;
 

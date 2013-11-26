@@ -10,4 +10,9 @@ package byui260.adventure.interfaces;
  */
 public interface DisplayInfo {
     
+    
+    
+    
+    public void display();
+    
 }

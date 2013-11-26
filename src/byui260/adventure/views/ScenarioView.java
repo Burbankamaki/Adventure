@@ -4,8 +4,8 @@
  */
 package byui260.adventure.views;
 
-import adventure.Adventure;
-import adventure.Scenario;
+import byui260.adventure.controls.Adventure;
+import byui260.adventure.entities.Scenario;
 import byui260.adventure.controls.ScenarioControl;
 import java.util.Scanner;
 

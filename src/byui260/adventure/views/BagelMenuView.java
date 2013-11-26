@@ -5,18 +5,20 @@
 package byui260.adventure.views;
 
 import byui260.adventure.controls.BagelMenuControl;
+import byui260.adventure.interfaces.DisplayInfo;
+import byui260.adventure.interfaces.EnterInfo;
 /**
  *
  * @author lisapage
  */import java.util.Scanner;
    import java.io.Serializable;
 
-public class BagelMenuView extends Menu{
+public class BagelMenuView extends Menu implements DisplayInfo, EnterInfo {
     
     public BagelMenuView() {
          super(BagelMenuView.bagelMenuItems);
     } 
-    
+
     private int i;
     private String selection;
 
@@ -61,7 +63,8 @@ public class BagelMenuView extends Menu{
             
      
     
-    private void displayMenu(){
+    @Override
+    public void display(){
         BagelMenuView bagelMenuView = new BagelMenuView();
          System.out.println("Welcome to The Hole Bagel Shop!\n"
                  +"Please choose up to four items off the menu by entering the \n" 
@@ -83,7 +86,7 @@ public class BagelMenuView extends Menu{
             do { 
         
              i+=1;
-             this.displayMenu();
+             this.display();
              selection = this.getCommand();
              
              if (selection.equals("1")) {

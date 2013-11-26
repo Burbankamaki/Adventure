@@ -4,13 +4,15 @@
  */
 package byui260.adventure.views;
 
+import byui260.adventure.interfaces.DisplayInfo;
+import byui260.adventure.interfaces.EnterInfo;
 import java.util.Scanner;
 
 /**
  *
  * @author lisapage
  */
-public abstract class Menu {
+public abstract class Menu implements DisplayInfo, EnterInfo{
   
    
    
@@ -57,5 +59,4 @@ public abstract class Menu {
         return false;
     }
     
-   public abstract void getInput(); 
 }

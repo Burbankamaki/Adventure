@@ -2,8 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adventure;
+package byui260.adventure.controls;
 
+import byui260.adventure.entities.Scenario;
 import byui260.adventure.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;

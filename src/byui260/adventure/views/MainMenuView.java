@@ -5,7 +5,7 @@
 package byui260.adventure.views;
 
 import byui260.adventure.controls.MainMenuControl;
-import adventure.Player;
+import byui260.adventure.entities.Player;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -61,7 +61,8 @@ public class MainMenuView extends Menu implements Serializable {
     }
 
         // displays the help menu
-    private static void display() {
+    @Override
+    public void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

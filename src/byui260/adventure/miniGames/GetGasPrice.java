@@ -1,4 +1,4 @@
-package adventure;
+package byui260.adventure.miniGames;
 
 /*
  * To change this template, choose Tools | Templates

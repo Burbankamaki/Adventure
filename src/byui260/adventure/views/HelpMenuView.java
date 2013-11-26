@@ -8,6 +8,7 @@ import byui260.adventure.controls.HelpMenuControl;
 
 
 
+
 public class HelpMenuView extends Menu{
     
     String choice;

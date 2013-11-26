@@ -5,6 +5,7 @@
 package byui260.adventure.miniGames;
 
 
+import byui260.adventure.interfaces.MinigameAlert;
 import byui260.adventure.views.Menu;
 import java.io.Serializable;
 
@@ -13,7 +14,7 @@ import java.io.Serializable;
  *
  * @author Motoko Kusanagi
  */
-public class GetShopHours extends Menu implements Serializable {
+public class GetShopHours extends Menu implements Serializable, MinigameAlert {
     
     public GetShopHours(){
      super(GetShopHours.shopHours);
@@ -39,6 +40,7 @@ public class GetShopHours extends Menu implements Serializable {
     
     @Override
     public void getInput(){
+        Minigame();
         System.out.println("what day is it today? we will see if the bagel shop is open!");
     
          
@@ -53,8 +55,13 @@ public class GetShopHours extends Menu implements Serializable {
         }
         }
     
+    @Override
+     public void Minigame(){
     
- 
+        System.out.println("\n\n***********************************************"+
+                            "\n      MINIGAME ALERT!! IS THE SHOP OPEN?!?!     \n"+
+                               "***********************************************\n\n");
+    }
     
 
     

@@ -20,7 +20,7 @@ public class FightScene extends Minigame implements Serializable {
     
     private static boolean valid = false;
     private static int healthPoint;
-    private final static String fightMinigameAlert="MINIGAME TIME!!  BADGER FIGHT!!";
+    public final static String fightMinigameAlert="MINIGAME TIME!!  BADGER FIGHT!!";
     
     @Override
  public void polymorphExample(){

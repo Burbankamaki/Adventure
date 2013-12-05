@@ -24,7 +24,7 @@ public class ScenarioView {
     
     public static int getInput(Scenario scenario) {
         
-        int nextScenarioIndex;
+        int nextScenarioIndex;    
         do {
            //ScenarioControl scenarioControl = new ScenarioControl();
             
@@ -44,7 +44,7 @@ public class ScenarioView {
             else {
                  nextScenarioIndex = scenario.getOption2ScenarioIndex();
             }
-            
+ 
              nextScenarioIndex = ScenarioControl.minigameCheck(nextScenarioIndex);
              int currentIndex = scenario.getCurrentIndex();
             nextScenarioIndex = ScenarioControl.endgameCheck(currentIndex,nextScenarioIndex);
@@ -70,7 +70,7 @@ public class ScenarioView {
       
         
     }
-    
+   
     
     
     

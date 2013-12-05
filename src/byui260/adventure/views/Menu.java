@@ -37,6 +37,7 @@ public abstract class Menu implements DisplayInfo, EnterInfo{
 
             command = input.next();
             valid = validCommand(command);
+            
             if (!validCommand(command)) {
                 System.out.println("Invalid command. Please enter a valid command.");
                 continue;

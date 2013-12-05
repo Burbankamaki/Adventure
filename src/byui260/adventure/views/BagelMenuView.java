@@ -137,7 +137,7 @@ public class BagelMenuView extends Menu implements DisplayInfo, EnterInfo {
     
      
       
-      public void displayMax (){
+      public void displayMax(){
           double max = customer.findMax();
     System.out.println("The most expensive item on your list is $" + max);
     }

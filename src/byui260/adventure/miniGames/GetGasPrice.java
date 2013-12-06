@@ -5,6 +5,8 @@ package byui260.adventure.miniGames;
  * and open the template in the editor.
  */
 
+import byui260.adventure.exceptions.GasPriceException;
+import byui260.adventure.exceptions.MenuException;
 import java.io.Serializable;
 /**
  *
@@ -57,8 +59,13 @@ public class GetGasPrice extends Minigame implements Serializable {
            System.out.println("Please enter 0 or more");
            continue;
         }   
+        
+        try {
         if (3.75 * gallons > 40){
-            System.out.println("you don't have enough money for that much gas! try buying fewer gallons\n");
+            throw new GasPriceException("you don't have enough money for that much gas! try buying fewer gallons\n");
+        }
+        }catch (GasPriceException ex) {
+                    System.out.println("you don't have enough money for that much gas! try buying fewer gallons\n");
         }
         
         

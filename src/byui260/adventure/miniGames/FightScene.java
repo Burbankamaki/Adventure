@@ -4,6 +4,7 @@
  */
 package byui260.adventure.miniGames;
 
+import byui260.adventure.exceptions.MenuException;
 import java.io.Serializable;
 import java.util.Scanner;
 import java.util.Random;
@@ -40,11 +41,20 @@ public class FightScene extends Minigame implements Serializable {
        while (!valid == true){ Scanner input = new Scanner(System.in);
         String healthPoints = input.next();
         String check = "[0-9]+";
-        if (!healthPoints.matches(check)){
-            System.out.println("please type only the number of your choice, nothing else. be sure it is greater than zero.");
-            continue;
-            }
+    //    if (!healthPoints.matches(check)){
+       //     System.out.println("please type only the number of your choice, nothing else. be sure it is greater than zero.");
+       //     continue;
+       //     }
+        try{
+        try{
          healthPoint = Integer.parseInt(healthPoints);
+        }catch(NumberFormatException e){
+            throw new MenuException("string entered is not a number", e);
+        //catch system excetpion rethrow custom
+        }
+        }catch(MenuException ex){
+            System.out.println("what you entered was not a number");
+        }
          if (healthPoint<=0){
             System.out.println("please type a number greater than zero. starting with zero health points would mean you are already dead");
             continue;

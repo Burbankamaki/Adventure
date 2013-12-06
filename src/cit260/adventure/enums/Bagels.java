@@ -10,7 +10,7 @@ package cit260.adventure.enums;
  */
 public enum Bagels {
     
- bagelMenuItems( new String[][]
+ /*bagelMenuItems( new String[][]
         {"1", "Blueberry Bagel","2.95"},
         {"2", "Strawberry Bagel", "2.95"}, 
         {"3", "Everything Bagel", "2.95"},
@@ -19,7 +19,7 @@ public enum Bagels {
         {"6", "Cheesey Pizza Bagel", "4.95"},
         {"7", "Ham and Swiss Bagel", "4.95"},
         {"8", "Roast Beef and Cheddar Bagel", "4.95"},
-    );
+    );*/
     
     
 }

@@ -7,6 +7,7 @@ package byui260.adventure.views;
 import byui260.adventure.controls.Adventure;
 import byui260.adventure.entities.Scenario;
 import byui260.adventure.controls.ScenarioControl;
+import byui260.adventure.exceptions.MenuException;
 import java.util.Scanner;
 
 /**
@@ -83,10 +84,12 @@ public class ScenarioView {
 
             choice = input.next();
             valid = validCommand(choice);
+            try{
             if (!validCommand(choice)) {
-                System.out.println("Invalid command. Please enter a valid command.");
-                continue;
+                 throw new MenuException("Invalid command. Please enter a valid command.");
             }
+            }catch (MenuException ex) {
+                    System.out.println("invalid command");}
                 
         } while (!valid);
         

@@ -7,13 +7,14 @@ package byui260.adventure.views;
 import byui260.adventure.controls.BagelMenuControl;
 import byui260.adventure.interfaces.DisplayInfo;
 import byui260.adventure.interfaces.EnterInfo;
+import byui260.adventure.interfaces.MinigameAlert;
 /**
  *
  * @author lisapage
  */import java.util.Scanner;
    import java.io.Serializable;
 
-public class BagelMenuView extends Menu implements DisplayInfo, EnterInfo {
+public class BagelMenuView extends Menu implements DisplayInfo, EnterInfo, MinigameAlert {
     
     public BagelMenuView() {
          super(BagelMenuView.bagelMenuItems);
@@ -62,10 +63,21 @@ public class BagelMenuView extends Menu implements DisplayInfo, EnterInfo {
     }
             
      
+        @Override
+     public void Minigame(){
+    
+        System.out.println("\n\n***********************************************"+
+                            "\n      MINIGAME ALERT!! BUY SOME BAGELS!!!      \n"+
+                               "***********************************************\n\n");
+    }
+    
+    
+    
     
     @Override
     public void display(){
         BagelMenuView bagelMenuView = new BagelMenuView();
+        Minigame();
          System.out.println("Welcome to The Hole Bagel Shop!\n"
                  +"Please choose up to four items off the menu by entering the \n" 
                  +"number associated with the item you wish to purchase. Enter \"q\"\n"

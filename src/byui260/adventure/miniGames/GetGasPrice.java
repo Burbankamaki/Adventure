@@ -34,6 +34,7 @@ public class GetGasPrice extends Minigame implements Serializable {
     
     
     public static double getGasPrice (){
+        minigameAlert(fightMinigameAlert);
        System.out.println("you take off in your car for work, but notice the gas is low\n you pull into your neighborhood gas station and notice you have 40 dollars cash.\ngas is currently $3.75 a gallon\nHow many gallons of gas do you want to buy?");
      do{  
         

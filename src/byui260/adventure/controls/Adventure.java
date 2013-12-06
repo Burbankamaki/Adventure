@@ -23,6 +23,8 @@ public class Adventure implements Serializable {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+   try{    
         Adventure myGame = new Adventure();
         
         MainMenuView mainMenuView = new MainMenuView();
@@ -32,7 +34,8 @@ public class Adventure implements Serializable {
         myGame.displayHelp();
         
         myGame.createScenarios(listOfScenarios);
-        
+   
+       
         do{
         
             
@@ -51,8 +54,15 @@ public class Adventure implements Serializable {
                 
         
         
-        
-    }
+      }
+   catch(Throwable ex){
+       System.out.println("You have totally busted this game, Bruiser. Or maybe it was our fault. Don't tell Mom.");
+   }finally{
+      
+       System.exit(1);
+   }
+   }
+    
     
     
     

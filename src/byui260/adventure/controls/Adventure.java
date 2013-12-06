@@ -52,16 +52,13 @@ public class Adventure implements Serializable {
         
         } while(1==1);
                 
+        }catch(Throwable ex){
+            System.out.println("REALLY BIB ERROR SORRY WE HAVE TO CLOSE NOW");
+        }finally{
+            System.exit(1);}
+        }
         
         
-      }
-   catch(Throwable ex){
-       System.out.println("You have totally busted this game, Bruiser. Or maybe it was our fault. Don't tell Mom.");
-   }finally{
-      
-       System.exit(1);
-   }
-   }
     
     
     

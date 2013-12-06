@@ -23,6 +23,9 @@ public class Adventure implements Serializable {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        try{
+        
         Adventure myGame = new Adventure();
         
         MainMenuView mainMenuView = new MainMenuView();
@@ -49,10 +52,14 @@ public class Adventure implements Serializable {
         
         } while(1==1);
                 
+        }catch(Throwable ex){
+            System.out.println("REALLY BIB ERROR SORRY WE HAVE TO CLOSE NOW");
+        }finally{
+            System.exit(1);}
+        }
         
         
-        
-    }
+    
     
     
     

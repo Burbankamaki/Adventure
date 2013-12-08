@@ -4,6 +4,7 @@
  */
 package adventure;
 
+import byui260.adventure.entities.Endgame;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

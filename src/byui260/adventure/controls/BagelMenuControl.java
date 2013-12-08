@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author lisapage
  */
-public class BagelMenuControl {
+public class BagelMenuControl implements Serializable {
     
 
      private String command;
@@ -138,6 +138,11 @@ public double totalDue(String [][]purchases){//for each
     }
     return total;
     }
+
+
+
+
+
 
 }    
     

@@ -8,7 +8,7 @@ package cit260.adventure.enums;
  *
  * @author lisapage
  */
-public enum Bagel {
+/*public enum Bagel {
     BLUEBERRY ("2.95"),
     STRAWBERRY ("2.95"),
     EVERYTHING ("2.95"),
@@ -18,4 +18,4 @@ public enum Bagel {
     HAM ("4.95"),
     ROASTBEEF ("4.95");
   
-}
+}*/ 

@@ -187,28 +187,24 @@ public class HelpFrame extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton6.setForeground(new java.awt.Color(54, 74, 86));
-        jButton6.setText("b");
-        jButton6.setBorder(null);
+        jButton6.setText("B");
 
         jButton7.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton7.setForeground(new java.awt.Color(54, 74, 86));
-        jButton7.setText("c");
-        jButton7.setBorder(null);
+        jButton7.setText("C");
 
-        jButton8.setBackground(new java.awt.Color(218, 208, 171));
+        jButton8.setBackground(new java.awt.Color(54, 74, 86));
         jButton8.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(54, 74, 86));
-        jButton8.setText("a");
-        jButton8.setBorder(null);
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("A");
 
         jButton9.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton9.setText("d");
-        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(54, 74, 86)));
+        jButton9.setActionCommand("D");
 
         jButton11.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton11.setForeground(new java.awt.Color(54, 74, 86));
         jButton11.setText("QUIT");
-        jButton11.setBorder(null);
 
         org.jdesktop.layout.GroupLayout jPanel7Layout = new org.jdesktop.layout.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -292,7 +288,7 @@ public class HelpFrame extends javax.swing.JFrame {
                 .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(jPanel5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jPanel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());

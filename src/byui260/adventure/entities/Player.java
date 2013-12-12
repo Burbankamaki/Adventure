@@ -50,17 +50,17 @@ public class Player implements Serializable {
     
     
     
-        public static void displayWinLossInfo(){
+        public static String displayWinLossInfo(){
         
         
-        System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
+        //System.out.println("you have won\t"+totalWins+"\ttimes. \nyou hae lost\t"+totalLosses+"\ttimes.");
         int winPercentage = 0;
         double trueWinPercentage = winPercentage;
         trueWinPercentage = totalWins / ( totalWins + totalLosses ) * 100;
         
-        System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"%! \ngood job!");
+       // System.out.println("your total win percentage is\n\t\t"+trueWinPercentage+"%! \ngood job!");
                 
-        
+        return "you have won "+totalWins+" times. \nyou have lost "+totalLosses+" times.\nyour total win percentage is "+trueWinPercentage+"%! good job!";
     }
 
 

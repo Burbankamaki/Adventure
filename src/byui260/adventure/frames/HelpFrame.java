@@ -40,14 +40,14 @@ public class HelpFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        errorfound = new javax.swing.JButton();
+        minigame = new javax.swing.JButton();
+        howToPlay = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtHelpText = new javax.swing.JTextArea();
 
         jPanel2.setBackground(new java.awt.Color(241, 242, 243));
 
@@ -152,7 +152,7 @@ public class HelpFrame extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 0, Short.MAX_VALUE)
+            .add(0, 191, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -162,31 +162,46 @@ public class HelpFrame extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(242, 242, 243));
         jPanel7.setForeground(new java.awt.Color(54, 74, 86));
 
-        jButton6.setBackground(new java.awt.Color(54, 74, 86));
-        jButton6.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(241, 242, 243));
-        jButton6.setText("B");
+        errorfound.setBackground(new java.awt.Color(54, 74, 86));
+        errorfound.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
+        errorfound.setForeground(new java.awt.Color(241, 242, 243));
+        errorfound.setText("find an error?");
+        errorfound.setToolTipText("");
+        errorfound.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                errorfoundActionPerformed(evt);
+            }
+        });
 
-        jButton7.setBackground(new java.awt.Color(54, 74, 86));
-        jButton7.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(241, 242, 243));
-        jButton7.setText("C");
+        minigame.setBackground(new java.awt.Color(54, 74, 86));
+        minigame.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
+        minigame.setForeground(new java.awt.Color(241, 242, 243));
+        minigame.setText("Minigames!");
+        minigame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minigameActionPerformed(evt);
+            }
+        });
 
-        jButton8.setBackground(new java.awt.Color(54, 74, 86));
-        jButton8.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(241, 242, 243));
-        jButton8.setText("A");
+        howToPlay.setBackground(new java.awt.Color(54, 74, 86));
+        howToPlay.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
+        howToPlay.setForeground(new java.awt.Color(241, 242, 243));
+        howToPlay.setText("How to play");
+        howToPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                howToPlayActionPerformed(evt);
+            }
+        });
 
-        jButton9.setBackground(new java.awt.Color(54, 74, 86));
-        jButton9.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(241, 242, 243));
-        jButton9.setText("D");
-        jButton9.setActionCommand("D");
-
-        jButton11.setBackground(new java.awt.Color(54, 74, 86));
-        jButton11.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(241, 242, 243));
-        jButton11.setText("QUIT");
+        exit.setBackground(new java.awt.Color(54, 74, 86));
+        exit.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
+        exit.setForeground(new java.awt.Color(241, 242, 243));
+        exit.setText("Return");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel7Layout = new org.jdesktop.layout.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -194,30 +209,27 @@ public class HelpFrame extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
-                    .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 54, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 54, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 54, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel7Layout.createSequentialGroup()
-                        .add(jButton11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .add(0, 0, 0)
-                        .add(jButton8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 54, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(0, 12, Short.MAX_VALUE))
+                        .add(0, 0, Short.MAX_VALUE)
+                        .add(jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(minigame, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(errorfound, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                            .add(howToPlay, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .add(exit, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel7Layout.createSequentialGroup()
-                        .add(jButton8)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton6)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton7)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton9))
-                    .add(jButton11))
+                .add(howToPlay)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(errorfound)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(minigame)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(exit)
                 .add(30, 30, 30))
         );
 
@@ -246,11 +258,10 @@ public class HelpFrame extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTextField2.setBackground(new java.awt.Color(241, 242, 243));
-        jTextField2.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(54, 74, 86));
-        jTextField2.setText("DISPLAY TEXT");
-        jTextField2.setBorder(null);
+        jtHelpText.setColumns(20);
+        jtHelpText.setRows(5);
+        jtHelpText.setText("select the topic you would like to view");
+        jScrollPane1.setViewportView(jtHelpText);
 
         org.jdesktop.layout.GroupLayout jPanel4Layout = new org.jdesktop.layout.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -259,15 +270,14 @@ public class HelpFrame extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel4Layout.createSequentialGroup()
                 .add(56, 56, 56)
                 .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 518, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(14, 14, 14)
+                .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel4Layout.createSequentialGroup()
-                        .add(jPanel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(308, 308, 308)
-                        .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(jPanel4Layout.createSequentialGroup()
-                        .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 595, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
                         .add(jPanel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(0, 34, Short.MAX_VALUE)))
+                        .add(0, 0, Short.MAX_VALUE))
+                    .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -281,10 +291,13 @@ public class HelpFrame extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel4Layout.createSequentialGroup()
                         .add(jPanel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)))
-                .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jPanel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 254, Short.MAX_VALUE)
+                        .add(jPanel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(0, 30, Short.MAX_VALUE))
+                    .add(jScrollPane1))
+                .addContainerGap())
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -303,6 +316,39 @@ public class HelpFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void howToPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_howToPlayActionPerformed
+        // TODO add your handling code here:
+        
+        this.jtHelpText.setText("at the end of every scenario you encounter during the game,\n"
+                + "there will be a set of options to choose from.\n"+
+                           "select your option of choice by typing ONLY the letter or number associated with\n"
+                + "the option and pressing the enter key.\n"+
+                           "sometimes you will be asked to enter a number of your choosing. "
+                + "\nplease be sure your number is a positive whole number.\n"+
+                           "have fun and enjoy the game!");
+    }//GEN-LAST:event_howToPlayActionPerformed
+
+    private void errorfoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_errorfoundActionPerformed
+        // TODO add your handling code here:
+        this.jtHelpText.setText("If you happen to encounter an error, make sure...\n"+
+                            "~that you only use lower case if typing a letter\n"+
+                            "~there are no other characters in your selection, including spaces\n\n"+
+                            "if you are still having trouble, please contact the developers.");
+    }//GEN-LAST:event_errorfoundActionPerformed
+
+    private void minigameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minigameActionPerformed
+        // TODO add your handling code here:
+        this.jtHelpText.setText("throughout the game, you will encounter a number of minigames.\n"+
+                "these are exciting occurnaces where your intelligence and you cunning will be put to the test!\n"+
+                "follow the on screen prompts when you encounter each minigame,\n"+
+                "but beware! in some cases, your actions may cause you to lose the game!\n");
+    }//GEN-LAST:event_minigameActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,17 +385,15 @@ public class HelpFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton errorfound;
+    private javax.swing.JButton exit;
+    private javax.swing.JButton howToPlay;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -358,8 +402,10 @@ public class HelpFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextArea jtHelpText;
+    private javax.swing.JButton minigame;
     // End of variables declaration//GEN-END:variables
 }

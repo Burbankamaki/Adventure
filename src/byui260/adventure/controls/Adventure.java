@@ -5,6 +5,9 @@
 package byui260.adventure.controls;
 
 import byui260.adventure.entities.Scenario;
+import byui260.adventure.frames.GetNamesFrame;
+import byui260.adventure.frames.HelpFrame;
+import byui260.adventure.frames.MainFrame;
 import byui260.adventure.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -14,6 +17,9 @@ import java.util.Scanner;
  * @author lisapage
  */
 public class Adventure implements Serializable {
+    
+    public static GetNamesFrame getNamesFrame = null;
+    
     
     
     private static Scenario[] listOfScenarios = new Scenario[7];
@@ -25,7 +31,18 @@ public class Adventure implements Serializable {
     public static void main(String[] args) {
         
    try{    
-        Adventure myGame = new Adventure();
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Adventure.getNamesFrame = new GetNamesFrame();
+                 
+                    
+                    Adventure.getNamesFrame.setVisible(true);
+                   
+                }
+            });
+       
+      /*  Adventure myGame = new Adventure();
         
         MainMenuView mainMenuView = new MainMenuView();
         
@@ -51,11 +68,13 @@ public class Adventure implements Serializable {
         
         
         } while(1==1);
-                
+                */
         }catch(Throwable ex){
             System.out.println("REALLY BIB ERROR SORRY WE HAVE TO CLOSE NOW");
-        }finally{
-            System.exit(1);}
+        }finally{if (Adventure.getNamesFrame != null) {
+                Adventure.getNamesFrame.dispose();
+            }
+           }
         }
         
         

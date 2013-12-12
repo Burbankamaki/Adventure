@@ -211,11 +211,17 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;WIN/LOSS&lt;br&gt;PERCENTAGE"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="winPercentageActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="exit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="EXIT"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>

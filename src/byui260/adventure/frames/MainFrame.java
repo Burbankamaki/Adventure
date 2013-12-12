@@ -87,8 +87,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         winPercentage.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
         winPercentage.setText("<html>WIN/LOSS<br>PERCENTAGE");
+        winPercentage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                winPercentageActionPerformed(evt);
+            }
+        });
 
         exit.setText("EXIT");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton3.setText("NEW GAME");
@@ -175,7 +185,21 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void helpMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpMenuActionPerformed
         // TODO add your handling code here:
+        HelpFrame helpFrame = new HelpFrame();
+        helpFrame.setVisible(true);
     }//GEN-LAST:event_helpMenuActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void winPercentageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_winPercentageActionPerformed
+        // TODO add your handling code here:
+        WinLossFrame winLossFrame = new WinLossFrame();
+       // helpFrame.jtDisplay.setText("THIS IS YOUR INFO");
+        winLossFrame.setVisible(true);
+    }//GEN-LAST:event_winPercentageActionPerformed
 
     /**
      * @param args the command line arguments

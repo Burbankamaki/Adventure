@@ -10,6 +10,6 @@ package byui260.adventure.interfaces;
  */
 public interface Calculate {
     
-    public double calc();
+    public double calc(Employee somePay);
     
 }

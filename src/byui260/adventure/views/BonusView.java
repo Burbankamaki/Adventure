@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package byui260.adventure.views;
-
+import byui260.adventure.interfaces.DisplayInfo;
 import byui260.adventure.entities.Employee;
 import byui260.adventure.interfaces.Calculate;
 import cit260.adventure.enums.Income;
@@ -22,7 +22,7 @@ public abstract class BonusView extends Employee implements Calculate {
    
   
      public double PayView(){
-        super(PayView.netPay);
+        return payCheck.netPay;//super(PayView.netPay);
     }
 
     public double getBonus() {
@@ -42,11 +42,11 @@ public abstract class BonusView extends Employee implements Calculate {
     }
 
     public PayView getNetPay() {
-        return netPay;
+        return payCheck.netPay;
     }
 
-    public void setNetPay(PayView netPay) {
-        this.netPay = netPay;
+    public void setNetPay(PayView aPayView) {
+        this.payCheck.netPay = aPayView.netPay;
     }
 
     public PayView getPayCheck() {
@@ -59,7 +59,7 @@ public abstract class BonusView extends Employee implements Calculate {
     @Override
     public double calc(PayView netPay){
         
-        finalPay = (PayView.netPay.getNetPay()); + bonus) * Income.TAXRATE.getRate();//how do I reference net pay? getters and setters?
+        finalPay = (netPay.getNetPay() + bonus) * Income.TAXRATE.getRate();//how do I reference net pay? getters and setters?
         return finalPay;
     }
     @Override

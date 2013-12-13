@@ -230,6 +230,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="NEW GAME"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -242,8 +245,10 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="jTextArea1">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Welcome to ADVENTURE!, the choose your own adventure &#xa;game created by Lisa Page and Bryan Davies for &#xa;CIT 260: Object Oriented Programming!&#xa;&#xa;From the menu on the right you can choose to start a &#xa;new game, view the help menu, or view the number &#xa;of times youhave won and lost during this session. &#xa;if you would like to quit the game, choose the exit &#xa;button on the bottom right portion of the window. &#xa;&#xa;Good luck, and have fun!"/>
               </Properties>
             </Component>
           </SubComponents>

@@ -102,6 +102,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Helvetica Neue", 0, 13)); // NOI18N
         jButton3.setText("NEW GAME");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -134,8 +139,10 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setText("Welcome to ADVENTURE!, the choose your own adventure \ngame created by Lisa Page and Bryan Davies for \nCIT 260: Object Oriented Programming!\n\nFrom the menu on the right you can choose to start a \nnew game, view the help menu, or view the number \nof times youhave won and lost during this session. \nif you would like to quit the game, choose the exit \nbutton on the bottom right portion of the window. \n\nGood luck, and have fun!");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -200,6 +207,13 @@ public class MainFrame extends javax.swing.JFrame {
        // helpFrame.jtDisplay.setText("THIS IS YOUR INFO");
         winLossFrame.setVisible(true);
     }//GEN-LAST:event_winPercentageActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        ScenarioFrame scenarioFrame = new ScenarioFrame();
+        scenarioFrame.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

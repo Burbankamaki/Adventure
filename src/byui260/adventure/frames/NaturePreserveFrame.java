@@ -4,16 +4,18 @@
  */
 package byui260.adventure.frames;
 
+import byui260.adventure.entities.Player;
+
 /**
  *
  * @author Motoko Kusanagi
  */
-public class ScenarioFrame extends javax.swing.JFrame {
+public class NaturePreserveFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ScenarioFrame
+     * Creates new form NaturePreserveFrame
      */
-    public ScenarioFrame() {
+    public NaturePreserveFrame() {
         initComponents();
     }
 
@@ -30,8 +32,8 @@ public class ScenarioFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         option1Button = new javax.swing.JButton();
         option2Button = new javax.swing.JButton();
         option1Text = new javax.swing.JTextField();
@@ -69,21 +71,21 @@ public class ScenarioFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(242, 242, 243));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("You are at home and need to get to work quickly.");
-        jScrollPane2.setViewportView(jTextArea2);
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("you take a stroll thruogh the preserve to be met by \nan angry badger who blocks your path");
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
+            .addComponent(jScrollPane1)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
         );
 
         option1Button.setText("Option 1");
@@ -94,17 +96,12 @@ public class ScenarioFrame extends javax.swing.JFrame {
         });
 
         option2Button.setText("Option 2");
-        option2Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                option2ButtonActionPerformed(evt);
-            }
-        });
 
         option1Text.setEditable(false);
-        option1Text.setText("attempt to drive to work");
+        option1Text.setText("feed badger your lunch");
 
         option2Text.setEditable(false);
-        option2Text.setText("attempt to walk to work");
+        option2Text.setText("fight the badger out of your way");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -118,7 +115,7 @@ public class ScenarioFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(option2Button)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(option2Text, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE))
+                                .addComponent(option2Text))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(option1Button)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -164,17 +161,15 @@ public class ScenarioFrame extends javax.swing.JFrame {
 
     private void option1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option1ButtonActionPerformed
         // TODO add your handling code here:
-        dispose();
-        DriveFrame driveFrame = new DriveFrame();
-        driveFrame.setVisible(true);
+         dispose();
+        EndgameFrame endgameFrame = new EndgameFrame();
+        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.setVisible(true);
+        double totalwin;
+        totalwin = Player.getTotalWins();
+        totalwin++;
+        Player.setTotalWins(totalwin);
     }//GEN-LAST:event_option1ButtonActionPerformed
-
-    private void option2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option2ButtonActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        WalkFrame walkFrame = new WalkFrame();
-        walkFrame.setVisible(true);
-    }//GEN-LAST:event_option2ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,20 +188,20 @@ public class ScenarioFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NaturePreserveFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NaturePreserveFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NaturePreserveFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NaturePreserveFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ScenarioFrame().setVisible(true);
+                new NaturePreserveFrame().setVisible(true);
             }
         });
     }
@@ -215,8 +210,8 @@ public class ScenarioFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton option1Button;
     private javax.swing.JTextField option1Text;
     private javax.swing.JButton option2Button;

@@ -163,7 +163,7 @@ public class NaturePreserveFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
          dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("you escape the badger!\nyou are then able to freely make your way to work.\nwhen you arrive at work, your boss gives you a promotion!");
         endgameFrame.setVisible(true);
         double totalwin;
         totalwin = Player.getTotalWins();

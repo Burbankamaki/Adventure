@@ -169,7 +169,7 @@ public class BackroadFrame extends javax.swing.JFrame {
         
         dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("the deer was much bigger than you expected, \nand your car crashed into it. \n\nthe crash knocks you out and you awaken in the hospital \nwhere your boss calls you and fires you.\n\n YOU LOSE D:");
         endgameFrame.setVisible(true);
         double totalLoss;
         totalLoss = Player.getTotalLosses();
@@ -181,7 +181,7 @@ public class BackroadFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
          dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("the deer move on, and you continue your relaxing drive to work. \nyou arrive on time and in one piece!\n phew! what a morning!\n\nYOU WIN! :D");
         endgameFrame.setVisible(true);
         double totalwin;
         totalwin = Player.getTotalWins();

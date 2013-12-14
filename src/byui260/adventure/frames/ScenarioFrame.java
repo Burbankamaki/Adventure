@@ -165,8 +165,8 @@ public class ScenarioFrame extends javax.swing.JFrame {
     private void option1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option1ButtonActionPerformed
         // TODO add your handling code here:
         dispose();
-        DriveFrame driveFrame = new DriveFrame();
-        driveFrame.setVisible(true);
+        GetGasFrame getGasFrame = new GetGasFrame();
+        getGasFrame.setVisible(true);
     }//GEN-LAST:event_option1ButtonActionPerformed
 
     private void option2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option2ButtonActionPerformed

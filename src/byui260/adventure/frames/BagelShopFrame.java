@@ -201,6 +201,11 @@ public class BagelShopFrame extends javax.swing.JFrame {
         });
 
         jButton4.setText("Option 2");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jTextField4.setEditable(false);
         jTextField4.setText("get in and show the man the way");
@@ -269,13 +274,21 @@ public class BagelShopFrame extends javax.swing.JFrame {
         
         dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("you hop in with the stranger.\nafter a short while of giving directions, \nyou begin to notice the driver is not following them.\nhe takes you instead into the countryside, you begin to worry.\nafter a while, the car dies. he askes you to check the engine\nwhen you climb out, he starts the car back up and leaves you! what a filthy prank!\n you are unable to make it to work on time and your boss fires you.");
         endgameFrame.setVisible(true);
         double totalLoss;
         totalLoss = Player.getTotalLosses();
         totalLoss++;
         Player.setTotalLosses(totalLoss);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        ShopHoursFrame shopHoursFrame = new ShopHoursFrame();
+        shopHoursFrame.setVisible(true);
+                
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

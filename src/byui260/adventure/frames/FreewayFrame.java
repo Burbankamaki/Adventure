@@ -5,6 +5,7 @@
 package byui260.adventure.frames;
 
 import byui260.adventure.entities.Player;
+import cit260.adventure.enums.EndgameTypes;
 
 /**
  *
@@ -168,7 +169,7 @@ public class FreewayFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("the car swerves to your side, slows up beside you, and rams into you at full speed! \nyou end up in the hospital where your bass calls you and fires you.");
         endgameFrame.setVisible(true);
         double totalLoss;
         totalLoss = Player.getTotalLosses();
@@ -183,7 +184,7 @@ public class FreewayFrame extends javax.swing.JFrame {
         
         dispose();
         EndgameFrame endgameFrame = new EndgameFrame();
-        endgameFrame.jtEndgameText.setText("endgame!");
+        endgameFrame.jtEndgameText.setText("the car speeds ahead and causes a massive wreck right after your exit. \ngood thing you're off the freeway! \n you arrive at work on time and in one piece!");
         endgameFrame.setVisible(true);
         double totalwin;
         totalwin = Player.getTotalWins();

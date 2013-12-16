@@ -65,20 +65,20 @@ public class Player implements Serializable {
 
 
 
-    public double getTotalWins() {
+    public static double getTotalWins() {
         return totalWins;
     }
 
-    public void setTotalWins(double totalWins) {
-        this.totalWins = totalWins;
+    public static void setTotalWins(double totalWins) {
+        Player.totalWins = totalWins;
     }
 
-    public double getTotalLosses() {
+    public static double getTotalLosses() {
         return totalLosses;
     }
 
-    public void setTotalLosses(double totalLosses) {
-        this.totalLosses = totalLosses;
+    public static void setTotalLosses(double totalLosses) {
+        Player.totalLosses = totalLosses;
     }
 
     

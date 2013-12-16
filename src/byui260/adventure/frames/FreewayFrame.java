@@ -4,16 +4,19 @@
  */
 package byui260.adventure.frames;
 
+import byui260.adventure.entities.Player;
+import cit260.adventure.enums.EndgameTypes;
+
 /**
  *
  * @author Motoko Kusanagi
  */
-public class ScenarioFrame extends javax.swing.JFrame {
+public class FreewayFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ScenarioFrame
+     * Creates new form FreewayFrame
      */
-    public ScenarioFrame() {
+    public FreewayFrame() {
         initComponents();
     }
 
@@ -30,8 +33,8 @@ public class ScenarioFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         option1Button = new javax.swing.JButton();
         option2Button = new javax.swing.JButton();
         option1Text = new javax.swing.JTextField();
@@ -69,21 +72,21 @@ public class ScenarioFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(242, 242, 243));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("You are at home and need to get to work quickly.");
-        jScrollPane2.setViewportView(jTextArea2);
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("on the freeway you encounter an angry driver!\n he's driving aggresively right in from of you!\nwhat will you do?");
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
+            .addComponent(jScrollPane1)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
         );
 
         option1Button.setText("Option 1");
@@ -101,10 +104,10 @@ public class ScenarioFrame extends javax.swing.JFrame {
         });
 
         option1Text.setEditable(false);
-        option1Text.setText("attempt to drive to work");
+        option1Text.setText("Is this a challenge? Duel the angry driver in a battle of driving skill!");
 
         option2Text.setEditable(false);
-        option2Text.setText("attempt to walk to work");
+        option2Text.setText("reduce your speed and put some safe distance between you and the angry driver");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -152,7 +155,7 @@ public class ScenarioFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,15 +168,28 @@ public class ScenarioFrame extends javax.swing.JFrame {
     private void option1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option1ButtonActionPerformed
         // TODO add your handling code here:
         dispose();
-        GetGasFrame getGasFrame = new GetGasFrame();
-        getGasFrame.setVisible(true);
+        EndgameFrame endgameFrame = new EndgameFrame();
+        endgameFrame.jtEndgameText.setText("the car swerves to your side, slows up beside you, and rams into you at full speed! \nyou end up in the hospital where your bass calls you and fires you.");
+        endgameFrame.setVisible(true);
+        double totalLoss;
+        totalLoss = Player.getTotalLosses();
+        totalLoss++;
+        Player.setTotalLosses(totalLoss);
+        
+       
     }//GEN-LAST:event_option1ButtonActionPerformed
 
     private void option2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option2ButtonActionPerformed
         // TODO add your handling code here:
+        
         dispose();
-        WalkFrame walkFrame = new WalkFrame();
-        walkFrame.setVisible(true);
+        EndgameFrame endgameFrame = new EndgameFrame();
+        endgameFrame.jtEndgameText.setText("the car speeds ahead and causes a massive wreck right after your exit. \ngood thing you're off the freeway! \n you arrive at work on time and in one piece!");
+        endgameFrame.setVisible(true);
+        double totalwin;
+        totalwin = Player.getTotalWins();
+        totalwin++;
+        Player.setTotalWins(totalwin);
     }//GEN-LAST:event_option2ButtonActionPerformed
 
     /**
@@ -193,20 +209,20 @@ public class ScenarioFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FreewayFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FreewayFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FreewayFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ScenarioFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FreewayFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ScenarioFrame().setVisible(true);
+                new FreewayFrame().setVisible(true);
             }
         });
     }
@@ -215,8 +231,8 @@ public class ScenarioFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton option1Button;
     private javax.swing.JTextField option1Text;
     private javax.swing.JButton option2Button;

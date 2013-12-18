@@ -211,8 +211,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         dispose();
-        ScenarioFrame scenarioFrame = new ScenarioFrame();
-        scenarioFrame.setVisible(true);
+        NewPayViewFrame newPayViewFrame = new NewPayViewFrame();
+        newPayViewFrame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

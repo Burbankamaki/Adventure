@@ -96,6 +96,11 @@ public class NewPayViewFrame extends javax.swing.JFrame {
 
         jButton2.setText("Continue");
         jButton2.setActionCommand("");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel4Layout = new org.jdesktop.layout.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -165,6 +170,13 @@ public class NewPayViewFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+          dispose();
+        ScenarioFrame scenarioFrame = new ScenarioFrame();
+        scenarioFrame.setVisible(true);
+    }//GEN-LAST:event_jButton2MouseClicked
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         hrsWorked = this.jTextField1.getText();

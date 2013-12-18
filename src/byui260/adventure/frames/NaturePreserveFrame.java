@@ -96,6 +96,11 @@ public class NaturePreserveFrame extends javax.swing.JFrame {
         });
 
         option2Button.setText("Option 2");
+        option2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                option2ButtonActionPerformed(evt);
+            }
+        });
 
         option1Text.setEditable(false);
         option1Text.setText("feed badger your lunch");
@@ -170,6 +175,19 @@ public class NaturePreserveFrame extends javax.swing.JFrame {
         totalwin++;
         Player.setTotalWins(totalwin);
     }//GEN-LAST:event_option1ButtonActionPerformed
+
+    private void option2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_option2ButtonActionPerformed
+        // TODO add your handling code here:
+        
+          dispose();
+        EndgameFrame endgameFrame = new EndgameFrame();
+        endgameFrame.jtEndgameText.setText("you put up your dukes and start swinging! \n the bader is too low to the ground and your swings sail high over his head.\nperhaps kicking would be a better course of action...\nyou kick at the badger, who deftly jumps to dogdge your kick\nand flies up to your face where he claws and scratches you\nuntil you pass out from the pain, KO!\n you are late to work, and looking rather disheveled,\nyour boss decides you need to be laid off...");
+        endgameFrame.setVisible(true);
+        double totalLoss;
+        totalLoss = Player.getTotalLosses();
+        totalLoss++;
+        Player.setTotalLosses(totalLoss);
+    }//GEN-LAST:event_option2ButtonActionPerformed
 
     /**
      * @param args the command line arguments

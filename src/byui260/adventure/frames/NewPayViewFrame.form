@@ -214,7 +214,8 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Exit"/>
+                <Property name="text" type="java.lang.String" value="Continue"/>
+                <Property name="actionCommand" type="java.lang.String" value=""/>
               </Properties>
             </Component>
           </SubComponents>

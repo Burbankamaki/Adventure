@@ -94,7 +94,8 @@ public class NewPayViewFrame extends javax.swing.JFrame {
 
         jButton1.setText("Enter");
 
-        jButton2.setText("Exit");
+        jButton2.setText("Continue");
+        jButton2.setActionCommand("");
 
         org.jdesktop.layout.GroupLayout jPanel4Layout = new org.jdesktop.layout.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

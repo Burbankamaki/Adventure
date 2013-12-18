@@ -2,27 +2,29 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-/*package byui260.adventure.views;
+package byui260.adventure.views;
 import byui260.adventure.interfaces.DisplayInfo;
 import byui260.adventure.entities.Employee;
-import byui260.adventure.interfaces.Calculate;
+import byui260.adventure.interfaces.NewCalculate;
 import cit260.adventure.enums.Income;
-import byui260.adventure.views.PayView;
+import byui260.adventure.views.NewPayView;
 /**
  *
  * @author lisapage
  */
-public abstract class BonusView extends Employee implements Calculate {
+public abstract class NewBonusView extends Employee implements NewCalculate, DisplayInfo {
     
     double bonus;
     double finalPay;
-    NewPayView netPay;
-    NewPayView payCheck = new PayView();
+    double payCheck;
     
+    
+   public NewBonusView(){
    
+   }
   
      public double NewPayView(){
-        return payCheck.netPay;//super(PayView.netPay);
+        return NewPayView.netPay;//super(PayView.netPay);
     }
 
     public double getBonus() {
@@ -41,42 +43,31 @@ public abstract class BonusView extends Employee implements Calculate {
         this.finalPay = finalPay;
     }
 
-    public NewPayView getNetPay() {
-        return payCheck.netPay;
-    }
+  
 
     public void setNetPay(NewPayView aPayView) {
-        this.payCheck.netPay = aPayView.netPay;
+        NewPayView.netPay = aPayView.netPay;
     }
 
-    public NewPayView getPayCheck() {
-        return payCheck;
+    public double  getPayCheck() {
+        return NewPayView.netPay;
     }
 
-    public void setPayCheck(NewPayView payCheck) {
-        this.payCheck = payCheck;
+    public  void setPayCheck() {
+        NewPayView.netPay = payCheck;
     }
     @Override
-    public double calc(NewPayView netPay){
+    public double calc(){
         
-        finalPay = (netPay.getNetPay() + bonus) * Income.TAXRATE.getRate();//how do I reference net pay? getters and setters?
+        finalPay = (NewPayView.netPay + bonus) * Income.TAXRATE.getRate();//how do I reference net pay? getters and setters?
         return finalPay;
     }
     @Override
     public void display(){
     
     
-    }
+    }}
     
     
-}netPay = hrsWorked * this.getPayRate() * Income.TAXRATE.getRate(); for an example from payView 
 
-  Double trate;
-    
-    Income(Double trate) {
-        this.trate = trate;
-    }
-    
-    public Double getRate() {
-        return this.trate;
-    }
+

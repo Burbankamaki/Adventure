@@ -5,16 +5,17 @@
 package byui260.adventure.views;
 
 import byui260.adventure.entities.Employee;
-import byui260.adventure.interfaces.Calculate;
+import byui260.adventure.interfaces.DisplayInfo;
+import byui260.adventure.interfaces.NewCalculate;
 import cit260.adventure.enums.Income;
 
 /**
  *
  * @author lisapage
  */
-public class NewPayView extends Employee implements Calculate{
+public abstract class NewPayView extends Employee implements NewCalculate, DisplayInfo{
     double hrsWorked;
-    double netPay;
+    public static double netPay;
     
     @Override
     public double calc(){
@@ -23,9 +24,8 @@ public class NewPayView extends Employee implements Calculate{
     
     }
 
-    public NewPayView(double hrsWorked, double netPay) {
-    this.hrsWorked = hrsWorked;
-    this.netPay = netPay;
+    public NewPayView() {
+   
     }
    public double getHrsWorked() {
         return hrsWorked;
@@ -42,5 +42,12 @@ public class NewPayView extends Employee implements Calculate{
     public void setNetPay(double netPay) {
         this.netPay = netPay;
     }
+    
+    public String displayText(){
+        String welcomeText =  "Let's find out how much money you have.\n"
+                + "Enter how many hours you worked last week.";
+        
+        return welcomeText;
+     }
 }
 

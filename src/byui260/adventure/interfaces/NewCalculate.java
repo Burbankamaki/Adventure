@@ -12,6 +12,6 @@ import byui260.adventure.entities.Employee;
  */
 public interface NewCalculate {
     
-    public double calc(Employee somePay);
+    public double calc();
     
 }

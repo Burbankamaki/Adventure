@@ -93,6 +93,11 @@ public class NewPayViewFrame extends javax.swing.JFrame {
         );
 
         jButton1.setText("Enter");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Continue");
         jButton2.setActionCommand("");
@@ -177,6 +182,13 @@ public class NewPayViewFrame extends javax.swing.JFrame {
         ScenarioFrame scenarioFrame = new ScenarioFrame();
         scenarioFrame.setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        hrsWorked = this.jTextField1.getText();
+        this.jTextArea2.setText("You can't pay your bills.\n"
+                + "GO TO WORK!");
+    }//GEN-LAST:event_jButton1MouseClicked
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         hrsWorked = this.jTextField1.getText();
